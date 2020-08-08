@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import Header from '../../common/Header';
+import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import img1 from './1_SB_jessie.JPG';
 import img2 from './2-SB-jessie1.JPG';
@@ -12,7 +13,8 @@ import img6 from './6_Sb_evelyn1.jpg';
 function SexBrief() {
     return (
         <div>
-            <Header />
+            <Menu page="work" />
+<Header />
             <p>
                 Interview series with sculptural components filmed and exhibited in 2017.  
                 <br/>

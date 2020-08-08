@@ -3,12 +3,14 @@ import '../App.css';
 import Header from '../common/Header';
 import Footer from '../common/Footer';
 import TwoColumns from '../common/TwoColumns';
+import Menu from '../common/Menu';
 import artAlmanac from './art-almanac-hatched-pica.png';
 const storyHouseSelect = './story-house-select/story_house_select.html';
 
 function Text() {
   return (
-    <div className="Text">
+    <div className="text">
+		<Menu page="text"/>
       <Header />
       <TwoColumns 
         Column1 = "Others"

@@ -1,12 +1,15 @@
 import React from 'react';
+import { A } from 'hookrouter';
 import '../App.css';
 import Header from '../common/Header';
 import Footer from '../common/Footer';
 import TwoColumns from '../common/TwoColumns';
+import Menu from '../common/Menu';
 
 function Work() {
   return (
     <div className="work">
+      <Menu page="work" />
       <Header />
       <TwoColumns 
         Column1 = "Exhibition"
@@ -24,40 +27,40 @@ function Rows1() {
     <div className="row-data">
       <p>
         <i>
-        <a href="/work/Casting-Couch">Casting Couch</a>
+        <A href="/work/Casting-Couch">Casting Couch</A>
         <br/>
         <br/>
-        <a href="/work/Muse">Muse</a>
+        <A href="/work/Muse">Muse</A>
         <br/>
         <br/>
-        <a href="/work/Yea-Shes-Got-Long-Legs-and-Huge">Yea, She's Got Long Legs & Huge Tits</a>
+        <A href="/work/Yea-Shes-Got-Long-Legs-and-Huge">Yea, She's Got Long Legs &amp; Huge Tits</A>
         <br/>
         <br/>
-        <a href="/work/5-Ways">5 Ways</a>
+        <A href="/work/5-Ways">5 Ways</A>
         <br/>
         <br/>
-        <a href="/work/meowTV">MeowTv</a>
+        <A href="/work/meowTV">MeowTv</A>
         <br/>
         <br/>
-        <a href="/work/Love-Fascism">Love & Fascism In The 21st Century</a>
+        <A href="/work/Love-Fascism">Love &amp; Fascism In The 21st Century</A>
         <br/>
         <br/>
-        <a href="/work/Act-4">Act 4: Fragments</a>
+        <A href="/work/Act-4">Act 4: Fragments</A>
         <br/>
         <br/>
-        <a href="/work/Sex-Brief">Sex Brief</a>
+        <A href="/work/Sex-Brief">Sex Brief</A>
         <br/>
         <br/>
-        <a href="/work/Buster">Buster</a>
+        <A href="/work/Buster">Buster</A>
         <br/>
         <br/>
-        <a href="/work/iPhone-Notes">iPhone Notes</a>
+        <A href="/work/iPhone-Notes">iPhone Notes</A>
         <br/>
         <br/>
-        <a href="/work/My-Beige-Girl">My Beige Girl</a>
+        <A href="/work/My-Beige-Girl">My Beige Girl</A>
         <br/>
         <br/>
-        <a href="/work/Bang-Bang-Youre-Mine">Bang Bang You're Mine</a>
+        <A href="/work/Bang-Bang-Youre-Mine">Bang Bang You're Mine</A>
         <br/>
         <br/>
         </i>
@@ -70,35 +73,35 @@ function Rows2() {
   return (
     <div className="row-data">
       <p>
-				<a href="/work/Something-Drawings-3">
+				<A href="/work/Something-Drawings-3">
 						<i>SOmething Drawings3,</i>  
 						<span className="right">READTHEROOM</span>
-				</a>
+				</A>
         <br/><br/>
-        <a href="/work/Something-Drawings-2">
+        <A href="/work/Something-Drawings-2">
           <i>SOmething Drawings2,</i> 
           <span className="right">READTHEROOM</span>
-        </a>
+        </A>
         <br/><br/>
-        <a href="/work/Something-Drawings-1">
+        <A href="/work/Something-Drawings-1">
           <i>SOmething Drawings1,</i>  
           <span className="right">READTHEROOM</span>
-        </a>
+        </A>
         <br/><br/>
-        <a href="/work/Toys-R-Us">
+        <A href="/work/Toys-R-Us">
           <i>`Toys R Us,</i>
           <span className="right">Second Space Studios</span>
-        </a>
+        </A>
         <br/><br/>
-        <a href="/work/Something-Fractions">
+        <A href="/work/Something-Fractions">
           Something Fractions, 
           <span className="right">Suicidal Oil Piglet</span>
-        </a>
+        </A>
         <br/><br/>
-        <a href="/work/The-Beige-Show">
+        <A href="/work/The-Beige-Show">
           The Beige Show,
           <span className="right">VCA Student Gallery</span>
-        </a>
+        </A>
         <br/><br/>
       </p>
     </div>

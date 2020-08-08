@@ -6,7 +6,7 @@ import('./sibhplaceholder.JPG'));
 const ReactPlayer = React.lazy(() =>
 import('react-player'));
 
-function Player(url) {
+function Player({url}) {
     // after some testing it seems like videos only take marginally longer 
     // to load than the placeholder thumbnails or even a spinner from font awesome 
     // so, won't add it unnecessarily 
@@ -21,7 +21,7 @@ function Player(url) {
             <Suspense fallback={fallback_div}>
                 <ReactPlayer
                     className='react-player'
-                    url = {url.url}
+                    url = {url}
                     width = '100%'
                     height = '100%'
                     config={{

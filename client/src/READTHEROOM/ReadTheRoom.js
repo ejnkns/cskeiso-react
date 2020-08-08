@@ -4,6 +4,7 @@ import '../App.css';
 import Header from '../common/Header';
 import Footer from '../common/Footer';
 import Player from '../common/Player';
+import Menu from '../common/Menu';
 import img1 from "./RTR_blue.png";
 import img2 from "./RTR_DOOR0.jpg";
 import img3 from "./16.jpg";
@@ -12,6 +13,7 @@ function ReadTheRoom() {
     var url = "https://www.youtube.com/embed/f25rr3bHu1Y";
     return (
         <div>
+            <Menu page="readtheroom" />
             <Header />
                 <p>
                     Read the Room is co-directed by Carmen-Sibha Keiso &amp; Kat Capel

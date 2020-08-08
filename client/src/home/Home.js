@@ -3,12 +3,12 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import placeholder from './sibhplaceholder.JPG';
 */
-import { Link } from 'raviger';
+import { A } from 'hookrouter';
 import '../App.css';
 import Footer from '../common/Footer';
 import Player from '../common/Player'
 import logoVideo from './movie.mp4';
-import CV from './CARMENKEISO_CV_28_07_2020.pdf';
+import CV from '../common/CARMENKEISO_CV_28_07_2020.pdf';
 
 function Home() {
   return (
@@ -44,17 +44,17 @@ function Below() {
       <div>
         <div className = "home-table home-below">
           <span>
-              <Link href="/work"> WORK</Link>
+              <A href="/work"> WORK</A>
           </span>
           <span>
-              <Link href="/text">TEXT</Link>
+              <A href="/text">TEXT</A>
           </span>
           <span>
-              <Link href="/audio"> AUDIO</Link>
+              <A href="/audio"> AUDIO</A>
           </span>
               <a target="_blank" rel="noopener noreferrer" href={CV}> CV</a>
         </div>
-        <Link className="home-below right" href="./READTHEROOM"> READTHEROOM</Link>
+        <A className="home-below right" href="./READTHEROOM"> READTHEROOM</A>
       </div>
     </div>
   )

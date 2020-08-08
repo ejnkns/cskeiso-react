@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import Header from '../../common/Header';
+import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import Player from '../../common/Player';
 import img1 from './Westspace_Extra-8.jpg';
@@ -13,7 +14,8 @@ function MeowTV() {
     var url4 = "https://www.youtube.com/embed/UhsFJ3-q7Mc";
     return (
         <div>
-            <Header />
+            <Menu page="work" />
+<Header />
                 <div className="para">
                     <br/>
                 Meow is an artist run initiative co-directed by: Calum Lockey, Hana Earles, &amp; Brennan Olver. Meow exhibited the work of four Melbourne based artists over the summer of 2018 - 2019. These exhibitions were directed and filmed by Carmen-Sibha Keiso and aired on Channel31 from May - July of 2019. Meow TV was exhibited at 

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import Header from '../../common/Header';
+import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import Player from '../../common/Player';
 import img1 from "./1 copy.jpg";
@@ -13,7 +14,8 @@ function SomethingDrawings2() {
     var url = "https://vimeo.com/353194832";
     return (
         <div>
-            <Header />
+            <Menu page="work" />
+<Header />
                 <h1>'SOmething Drawings2' READTHEROOM</h1>
                 <Player url={url} />
                 <p>Opening reception for Something Drawings series2 presented by Read the Room in Melbourne, Audrey Schmidt presentation of catalogue text / RTR lecture series.  Curated by Carmen-Sibha Keiso.  6.8.2019</p>

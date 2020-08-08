@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import Header from '../../common/Header';
+import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import img1 from "./somethingfractions.jpeg"
 import img2 from "./somethingfractions1.jpeg"
@@ -9,7 +10,8 @@ import img3 from "./SF1.jpg"
 function SomethingFractions() {
     return (
         <div>
-            <Header />
+            <Menu page="work" />
+<Header />
             <p>
                 a night of music and performance at Suicidal Oil Piglet<br/>
                 Presented by Carmen Keiso<br/>

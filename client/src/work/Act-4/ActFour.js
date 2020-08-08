@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import Header from '../../common/Header';
+import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import img1 from './Act4_1.jpg';
 import img2 from './Act4_2.jpg';
@@ -10,7 +11,8 @@ import ActFourPDF from './act4.pdf';
 function ActFour() {
     return (
         <div>
-            <Header />
+            <Menu page="work" />
+<Header />
             <p>
             <a target="_blank" rel="noopener noreferrer" href={ActFourPDF}>Act Four: Fragments</a>
             <br/>

@@ -3,10 +3,12 @@ import '../App.css';
 import Header from '../common/Header';
 import Footer from '../common/Footer';
 import TwoColumns from '../common/TwoColumns';
+import Menu from '../common/Menu';
 
 function Audio() {
   return (
-    <div className="Audio">
+    <div className="audio">
+      <Menu page="audio"/>
       <Header />
       <TwoColumns 
         Column1 = "live reading"
@@ -59,7 +61,7 @@ function Rows2() {
         <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/baba_sib/live-442018">Live, Yarra Hotel</a>
         <br/>
         <br/>
-        <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/baba_sib/live-longplay">Live, Long Play</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/baba_sib/live-longplay">Live, Long Play where there will be many people incliuding joe who's a great guy </a>
         </p>
       </div>
   )
