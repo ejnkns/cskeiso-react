@@ -13,17 +13,15 @@ function SomethingFractions() {
             <Menu page="work" />
 <Header />
             <p>
-                a night of music and performance at Suicidal Oil Piglet<br/>
-                Presented by Carmen Keiso<br/>
-                <br/>
-                <br/>
-                Starring:<br/>
-                henri &amp; tyreise KERslake<br/>
-                isobel d'cruz<br/>
-                arse'inns inferno<br/>
-                coachella<br/>
-
                 28th April 2017<br/>
+                An evening of music and performance at&nbsp;
+                <a href="https://suicidaloilpiglet.org/exhibitions">
+                    Suicidal Oil Piglet <br/>
+                </a>
+                Presented by Carmen-Sibha Keiso<br/>
+                <br/><br/>
+                Readings: Kat Capel<br/>
+                Music: Henri &amp; Tyreise KERslake, Isobel D'cruz, Arse'inns Inferno, Coachella<br/>
             </p>
             <img alt=""  src={img1}/>
             <img alt=""  src={img2}/>

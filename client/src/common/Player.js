@@ -1,10 +1,16 @@
-import React, { Suspense } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import '../App.css';
 
+/*
 const homePlaceholder = React.lazy(() =>
 import('./sibhplaceholder.JPG'));
+*/
+/*
 const ReactPlayer = React.lazy(() =>
 import('react-player'));
+*/
+
+import ReactPlayer from 'react-player';
 
 function Player({url}) {
     // after some testing it seems like videos only take marginally longer 
@@ -12,12 +18,22 @@ function Player({url}) {
     // so, won't add it unnecessarily 
     //<img className="placeholder" alt="thumbnail" src={getThumbnail(url)} />
 
+
     var fallback_div = 
         <div className=" fallback-div center-parent">
             <div className="center-child">Loading...</div>
         </div>;
+
+/*
+    useEffect(() => {
+        let el = document.querySelector('.player');
+        el.classList.add('solid');
+    });
+
+    */
+
     return (
-        <div className="player">
+        <div id="player" className="player fade-in">
             <Suspense fallback={fallback_div}>
                 <ReactPlayer
                     className='react-player'

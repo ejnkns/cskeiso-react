@@ -13,9 +13,10 @@ function LongLegs() {
             <Menu page="work" />
 <Header />
             <p>
-            <a target="_blank" rel="noopener noreferrer" href={LongLegsPDF}>Yea she's got long legs and huge tits</a>
-            <br/>
-            PDF
+                Yea she's got long legs and huge tits<br/>
+            <a target="_blank" rel="noopener noreferrer" href={LongLegsPDF}>
+                PDF
+            </a>
             </p>
             <img alt="she's got long legs" src={img1}/>
             <img alt="clipboard floorplan" src={img2}/>

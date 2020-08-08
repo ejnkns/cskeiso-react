@@ -17,24 +17,23 @@ function Muse() {
     return (
         <div>
             <Menu page="work" />
-<Header />
-                <p>
-                    A depressed girl tries to go for a walk in Brunswick…. Thinking she is in a French new-wave film, when in fact her reality is simply a slacker.
-                    <br/>
-                    Exhibited at The Alderman for UN Projects
-                    <br/>
-                    <br/>
-                    <Player url={url1}/>
-                    <br/>
-                    <Player url={url2}/>
-                </p>
-
-                <img alt="" className="rotate90" src={img1}/>
-                <img alt="" className="rotate90" src={img2}/>
-                <img alt="" src={img3}/>
-                <img alt="" src={img4}/>
-                <img alt="" src={img5}/>
-                <img alt="" src={img6}/>
+            <Header />
+            <p>
+                Trapped in her own malaise, a depressed girl tries to go for a walk in 
+                Brunswick thinking she is in a French new-wave film,  yet after a series 
+                of unrequited bump-ins, muse if confronted by a harsh reality that is 
+                simply a slacker. Brit D’Argaville as MUSE 2019.
+                <br/><br/> 
+                Showcased at the Alderman as part of the 2019 UN Projects fundraiser. 
+            </p>
+            <Player url={url1}/>
+            <Player url={url2}/>
+            <img alt="" className="rotate90" src={img1}/>
+            <img alt="" className="rotate90" src={img2}/>
+            <img alt="" src={img3}/>
+            <img alt="" src={img4}/>
+            <img alt="" src={img5}/>
+            <img alt="" src={img6}/>
             <Footer />
         </div>
     );

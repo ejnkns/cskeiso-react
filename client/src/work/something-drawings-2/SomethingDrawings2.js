@@ -15,19 +15,27 @@ function SomethingDrawings2() {
     return (
         <div>
             <Menu page="work" />
-<Header />
-                <h1>'SOmething Drawings2' READTHEROOM</h1>
-                <Player url={url} />
-                <p>Opening reception for Something Drawings series2 presented by Read the Room in Melbourne, Audrey Schmidt presentation of catalogue text / RTR lecture series.  Curated by Carmen-Sibha Keiso.  6.8.2019</p>
-                <p>@readtheroom_  ANDER RENNICK BRIGHID FITZGERALD DOUGLAS MAXTED GEORGE EGERTON-WARBURTON LORILEE YANG NIK LEE VICTORIA TODOROV  ZOE JACKSON</p>
-                <p>+ catalogue text as part of our RTR LECTURE SERIES by:  AUDREY SCHMIDT</p>
-                <p>'Read the Room' is an expanded literary practice space focusing on writers and artists working both on an off the page. Co-directed by Kat Capel and Carmen Keiso, the initiative runs workshopping, reading, and exhibition events. &copy;</p>
-
-                <img alt="" src = {img1}/> 
-                <img alt="" src = {img2}/> 
-                <img alt="" src = {img3}/> 
-                <img alt="" src = {img4}/> 
-                <img alt="" src = {img5}/> 
+            <Header />
+            <h1>'SOmething Drawings2' READTHEROOM</h1>
+            <p>
+                Opening reception for Something Drawings Series2 presented by Read the Room. <br/>
+                With Audrey Schmidt’s presentation of the catalogue text / RTR lecture series. <br/>
+                Curated by Carmen-Sibha Keiso <br/>
+                6.8.2019<br/>
+                @readtheroom_ <br/>
+                ANDER RENNICK  - BRIGHID FITZGERALD - DOUGLAS MAXTED - GEORGE EGERTON-WARBURTON 
+                - LORILEE YANG - NIK LEE - VICTORIA TODOROV - ZOE JACKSON - AUDREY SCHMIDT <br/>
+                <br/><br/>
+                'Read the Room' is an expanded literary practice space focusing on writers and artists 
+                working both on and off the page. Co-directed by Carmen-Sibha Keiso and Kat Capel, the
+                initiative runs workshops, readings, lectures and exhibition events.
+            </p>
+            <Player url={url} />
+            <img alt="" src = {img1}/> 
+            <img alt="" src = {img2}/> 
+            <img alt="" src = {img3}/> 
+            <img alt="" src = {img4}/> 
+            <img alt="" src = {img5}/> 
             <Footer />
         </div>
     )

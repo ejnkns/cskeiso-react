@@ -18,12 +18,17 @@ function LoveFascism() {
     return (
         <div>
             <Menu page="work" />
-<Header />
+            <Header />
+            <p>
                 Carmen-Sibha Keiso&rsquo;s debut feature-length film &lsquo;Love &amp; Fascism in the 21st Century&rsquo; is a meta-non-narrative-docudrama-video-essay, based on a text written by the artist. The script is performed by a range of drama, art, music, and dance students who attempt to enact Keiso&rsquo;s reflections on their shared contemporary condition.<br />
                 <br />
                 Presenting a self-reflexive internal dialogue which questions themes surrounding aesthetic representation, technique, and cultural diaspora. A French and American voice-over narrate the confessional monologue over a backdrop of vignettes, episodes and melodramatic soundbites. In search of the archival, Keiso attempts to re-imagine the possibilities for film and storytelling in an environment overwhelmed by the self.<br/><br />
-                Please email carmen.s.keiso@gmail.com for exclusive private access to film link.<br /><br />
-                <br/>
+                Please email
+                <a href="mailto:carmen.s.keiso@gmail.com">
+                  &nbsp;carmen.s.keiso@gmail.com&nbsp;
+                 </a>
+                for exclusive private access to film link.
+            </p>
                 <Player url={"https://player.vimeo.com/video/288111386"}/>
                 <img alt="" src={img1}/>
                 <img alt="" src={img2}/>

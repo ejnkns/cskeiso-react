@@ -4,6 +4,7 @@ import Header from '../common/Header';
 import Footer from '../common/Footer';
 import TwoColumns from '../common/TwoColumns';
 import Menu from '../common/Menu';
+import { A } from 'hookrouter';
 
 function Audio() {
   return (
@@ -29,11 +30,11 @@ function Rows1() {
             <br/>
             IchikawaEdward
             <br/><br/>
-            <a target="_blank" rel="noopener noreferrer" href="/x">Diana Di Prima Revolutionary Letters,</a>
+            <A target="_blank" rel="noopener noreferrer" href="/audio/Hard-To-Read">Diana Di Prima Revolutionary Letters,</A>
             <br/>
             Hard to Read, Montez Press Radio
             <br/><br/>
-            <a target="_blank" rel="noopener noreferrer" href="/x">On Love & Fascism: The Cultivated Self</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1rTLduD5kSC4-TmGDaRCICEQZkrC656Ph/view">On Love &amp; Fascism: The Cultivated Self</a>
             <br/>
             Writing &amp; Concept, SIGNAL Artspace
             <br/><br/>
@@ -58,10 +59,10 @@ function Rows2() {
         <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/carmensk/mild-autumn-jazz-20-5-18">Mild Autumn Jazz mix</a>
         <br/>
         <br/>
-        <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/baba_sib/live-442018">Live, Yarra Hotel</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/baba_sib/live-442018">Yarra Hotel Live</a>
         <br/>
         <br/>
-        <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/baba_sib/live-longplay">Live, Long Play where there will be many people incliuding joe who's a great guy </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/baba_sib/live-longplay">Long Play Live</a>
         </p>
       </div>
   )

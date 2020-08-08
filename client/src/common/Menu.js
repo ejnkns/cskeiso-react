@@ -6,9 +6,8 @@ import CV from './CARMENKEISO_CV_28_07_2020.pdf';
 function Menu(props) {
   
   function isSelected(page) {
-    console.log("page = \t" + page + "\nprops.page = \t" + props.page);
     if (page===props.page) {
-      return("");
+      return("i");
     } else {
       return("opaque");
     }

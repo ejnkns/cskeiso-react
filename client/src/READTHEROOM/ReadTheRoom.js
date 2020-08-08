@@ -7,10 +7,9 @@ import Player from '../common/Player';
 import Menu from '../common/Menu';
 import img1 from "./RTR_blue.png";
 import img2 from "./RTR_DOOR0.jpg";
-import img3 from "./16.jpg";
 
 function ReadTheRoom() {
-    var url = "https://www.youtube.com/embed/f25rr3bHu1Y";
+    var url = "https://www.youtube.com/watch?v=0bFQLptPPaI";
     return (
         <div>
             <Menu page="readtheroom" />
@@ -29,11 +28,9 @@ function ReadTheRoom() {
                     KCCK
                     <br/><br/>
                 </p>
-                <img alt="" src={img1}/>
-                <br/>
-                <Player url={url} />
-                <img alt="" src={img2}/>
-                <img alt="" src={img3}/>
+            <img alt="" src={img1}/>
+            <img alt="" src={img2}/>
+            <Player url={url} />
             <Footer />
         </div>
     );

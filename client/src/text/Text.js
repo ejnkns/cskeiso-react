@@ -33,9 +33,9 @@ function Rows1() {
 			<br/><br/>
 			<a target="_blank" rel="noopener noreferrer" href="http://1856.com.au/artists/reproductions">Improvements &amp; Reproductions</a>
 			<br/>
-			1856
+			Nic Tammens: 1856
 			<br/><br/>
-			<a target="_blank" rel="noopener noreferrer" href="x">Art Show, Meow2</a>
+			<a target="_blank" rel="noopener noreferrer" href="https://memoreview.net/blog/alethea-everard-art-show-at-meow2-by-audrey-schmidt">Art Show, Meow2</a>
 			<br/>
 			Audrey Schmidt, Memo Review	
 			<br/><br/>
@@ -51,7 +51,7 @@ function Rows1() {
 			<br/>
 			Patrick Gunasekera, Pelican Magazine
 			<br/><br/>
-			<a target="_blank" rel="noopener noreferrer" href={storyHouseSelect}> Love & Fascism in the 21st Century: Interview with Carmen-Sibha Keiso</a>
+			<a target="_blank" rel="noopener noreferrer" href={storyHouseSelect}> Love &amp; Fascism in the 21st Century: Interview with Carmen-Sibha Keiso</a>
 			<br/>
 			Lisa Radford, Story House Select
 			<br/><br/>
