@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 /*
-import ReactPlayer from 'react-player';
 import placeholder from './sibhplaceholder.JPG';
 */
 import { A } from 'hookrouter';
@@ -11,8 +10,14 @@ import logoVideo from './movie.mp4';
 import CV from '../common/CARMENKEISO_CV_28_07_2020.pdf';
 
 function Home() {
+
+  useEffect(() => {
+    let el = document.querySelector('.fade-in');
+    el.classList.add("solid");
+  });
+
   return (
-    <div className="App">
+    <div className="home fade-in">
       <Above/>
       <Player url={logoVideo}/>
       <Below/>
@@ -35,7 +40,6 @@ function Above() {
       </a>
     </div>
   )
-
 }
 
 function Below() {
@@ -60,27 +64,5 @@ function Below() {
   )
 
 }
-
-/*
-function Video() {
-  var url = logoVideo;
-  // having the 'light' property set seems to disable autoplay
-  //light = {placeholder} 
-  return (
-      <div className="  player">
-          <img className="video-placeholder" alt="" src={placeholder} />
-          <ReactPlayer
-              className='react-player'
-              url = {url} 
-              width = "100%"
-              height = "auto"
-              playing
-              muted
-              loop
-          />
-      </div>
-  ) 
-}
-*/
 
 export default Home;

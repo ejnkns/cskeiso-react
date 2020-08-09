@@ -5,35 +5,33 @@ import '../App.css';
 const homePlaceholder = React.lazy(() =>
 import('./sibhplaceholder.JPG'));
 */
-/*
+/* i think i actually don't want this lazy loaded.
+    they're almost alwqays immediatly in the view port
+    I want the videos to be viewable as soon as possible
 const ReactPlayer = React.lazy(() =>
 import('react-player'));
 */
-
 import ReactPlayer from 'react-player';
 
 function Player({url}) {
     // after some testing it seems like videos only take marginally longer 
     // to load than the placeholder thumbnails or even a spinner from font awesome 
     // so, won't add it unnecessarily 
-    //<img className="placeholder" alt="thumbnail" src={getThumbnail(url)} />
-
-
     var fallback_div = 
         <div className=" fallback-div center-parent">
             <div className="center-child">Loading...</div>
         </div>;
 
-/*
+
+    // fade-in videos 
     useEffect(() => {
-        let el = document.querySelector('.player');
-        el.classList.add('solid');
+        let els = document.querySelectorAll('.fade-in');
+        els.forEach((el) => el.classList.add('solid'));
     });
 
-    */
 
     return (
-        <div id="player" className="player fade-in">
+        <div className="player fade-in">
             <Suspense fallback={fallback_div}>
                 <ReactPlayer
                     className='react-player'
@@ -61,41 +59,6 @@ function Player({url}) {
            </Suspense> 
         </div>
     ) 
-}
-
-//code for getting a thumbnail of a video
-//but it never has time to show anyway 
-/*
-function getThumbnail(url) {
-    if(String(url).includes("youtube")) {
-        var id = getYoutubeID(url);
-        return("https://img.youtube.com/vi/" + id + "/0.jpg");
-
-    } else if(String(url).includes("vimeo")) {
-        return(getVimeoThumbnailURL);
-    } else {
-        // it's the homepage video
-        return {homePlaceholder};
-    }
-}
-*/
-function getYoutubeID(url) {
-    return(url
-        .match(
-            /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|&v(?:i)?=))([^#&?]*).*/
-        )
-    );
-}
-
-async function getVimeoThumbnailURL(url) {
-    try {
-        let res = await fetch("https://vimeo.com/api/oembed.json?url=" + { url });
-        let jsonData = await res.json();
-        return jsonData.thumbnail_url;
-    }
-    catch (error) {
-        console.error(error);
-    }
 }
 
 export default Player;

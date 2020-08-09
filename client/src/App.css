@@ -15,12 +15,12 @@
 }
 
 .solid {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .fade-in {
     opacity: 0;
-    transition: 2s opacity;
+    transition: 3s opacity;
 }
 
 .current-page {
