@@ -15,10 +15,9 @@ function SomethingDrawings1() {
     return (
         <div>
             <Menu page="work" />
-<Header />
-                <h1>'SOmething Drawings1' READTHEROOM</h1>
-
-                <p>
+            <Header />
+            <h1>'SOmething Drawings1' READTHEROOM</h1>
+            <p>
                 Opening reception for Something Drawings series1 presented by Read the Room in Melbourne, Spencer Lai lecture performance of catalogue text. Curated by Carmen-Sibha Keiso <br />
                 28.5.2019<br />
                 <br />
@@ -32,14 +31,14 @@ function SomethingDrawings1() {
                 BRITTANY ROSE WYPER<br />
                 <br />
                 'Read the Room' is an expanded literary practice space focusing on writers and artists working both on an off the page. Co-directed by Kat Capel and Carmen Keiso, the initiative runs workshopping, reading, and exhibition events.
-                </p>
+            </p>
 
-                <Player url={url}/>
-                <img alt="" src = {img1}/> 
-                <img alt="" src = {img2}/> 
-                <img alt="" src = {img3}/> 
-                <img alt="" src = {img4}/> 
-                <img alt="" src = {img5}/> 
+            <Player url={url}/>
+            <img loading="lazy" alt="" src = {img1}/> 
+            <img loading="lazy" alt="" src = {img2}/> 
+            <img loading="lazy" alt="" src = {img3}/> 
+            <img loading="lazy" alt="" src = {img4}/> 
+            <img loading="lazy" alt="" src = {img5}/> 
             <Footer />
         </div>
     )

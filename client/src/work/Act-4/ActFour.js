@@ -12,15 +12,15 @@ function ActFour() {
     return (
         <div>
             <Menu page="work" />
-<Header />
+            <Header />
             <p>
             <a target="_blank" rel="noopener noreferrer" href={ActFourPDF}>Act Four: Fragments</a>
             <br/>
             PDF
             </p>
             <img alt="" src={img1}/>
-            <img alt="" src={img2}/>
-            <img alt="" src={img3}/>
+            <img loading="lazy" alt="" src={img2}/>
+            <img loading="lazy" alt="" src={img3}/>
             <Footer />
         </div>
     );

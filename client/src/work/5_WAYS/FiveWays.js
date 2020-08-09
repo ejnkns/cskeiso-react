@@ -25,9 +25,9 @@ function FiveWays() {
                 </p>
                 <Player url={url} />
                 <br/>
-                <img alt="" src={img1}/>
-                <img alt="" src={img2}/>
-                <img alt="" src={img3}/>
+                <img loading="lazy" alt="" src={img1}/>
+                <img loading="lazy" alt="" src={img2}/>
+                <img loading="lazy" alt="" src={img3}/>
             <Footer />
         </div>
     );

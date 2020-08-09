@@ -42,7 +42,7 @@ function MeowTV() {
                 <br/>
                 PDF available.
             </p>
-            <img alt="" src={img1}/> 
+            <img loading="lazy" alt="" src={img1}/> 
             <Player url={url1}/> 
             <Player url={url2}/> 
             <Player url={url3}/> 

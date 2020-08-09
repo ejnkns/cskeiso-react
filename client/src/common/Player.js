@@ -1,6 +1,6 @@
 import React, { useEffect, Suspense } from 'react';
 import '../App.css';
-
+import ReactPlayer from 'react-player';
 /*
 const homePlaceholder = React.lazy(() =>
 import('./sibhplaceholder.JPG'));
@@ -11,16 +11,18 @@ import('./sibhplaceholder.JPG'));
 const ReactPlayer = React.lazy(() =>
 import('react-player'));
 */
-import ReactPlayer from 'react-player';
 
 function Player({url}) {
     // after some testing it seems like videos only take marginally longer 
     // to load than the placeholder thumbnails or even a spinner from font awesome 
-    // so, won't add it unnecessarily 
+    // so, won't ad it unnecessarily 
     var fallback_div = 
         <div className=" fallback-div center-parent">
             <div className="center-child">Loading...</div>
         </div>;
+
+
+
 
 
     // fade-in videos 
@@ -29,11 +31,16 @@ function Player({url}) {
         els.forEach((el) => el.classList.add('solid'));
     });
 
+    let player = null;
+    function handleReady() {
+        player = getInternalPlayer() // Internal player now ready
+    }
 
     return (
         <div className="player fade-in">
             <Suspense fallback={fallback_div}>
                 <ReactPlayer
+                    onReady={handleReady}
                     className='react-player'
                     url = {url}
                     width = '100%'

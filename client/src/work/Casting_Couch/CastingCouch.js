@@ -22,7 +22,7 @@ function CastingCouch() {
 
             <img alt="carmen lying on a black leather couch" src={img1}/>
             <img alt="a small old tv showing the same scene" src={img2}/>
-            <img alt="the tv is in the corner of an art gallery" src={img3}/>
+            <img loading="lazy" alt="the tv is in the corner of an art gallery" src={img3}/>
             <Footer />
         </div>
     );

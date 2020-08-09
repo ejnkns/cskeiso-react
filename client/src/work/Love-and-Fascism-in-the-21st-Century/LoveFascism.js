@@ -30,15 +30,15 @@ function LoveFascism() {
                 for exclusive private access to film link.
             </p>
                 <Player url={"https://player.vimeo.com/video/288111386"}/>
-                <img alt="" src={img1}/>
-                <img alt="" src={img2}/>
-                <img alt="" src={img3}/>
-                <img alt="" src={img4}/>
-                <img alt="" src={img5}/>
-                <img alt="" src={img6}/>
-                <img alt="" src={img7}/>
-                <img alt="" src={img8}/>
-                <img alt="" src={img9}/>
+                <img loading="lazy" alt="" src={img1}/>
+                <img loading="lazy" alt="" src={img2}/>
+                <img loading="lazy" alt="" src={img3}/>
+                <img loading="lazy" alt="" src={img4}/>
+                <img loading="lazy" alt="" src={img5}/>
+                <img loading="lazy" alt="" src={img6}/>
+                <img loading="lazy" alt="" src={img7}/>
+                <img loading="lazy" alt="" src={img8}/>
+                <img loading="lazy" alt="" src={img9}/>
             <Footer />
         </div>
     );

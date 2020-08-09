@@ -28,12 +28,12 @@ function Muse() {
             </p>
             <Player url={url1}/>
             <Player url={url2}/>
-            <img alt="" className="rotate90" src={img1}/>
-            <img alt="" className="rotate90" src={img2}/>
-            <img alt="" src={img3}/>
-            <img alt="" src={img4}/>
-            <img alt="" src={img5}/>
-            <img alt="" src={img6}/>
+            <img loading="lazy" alt="" className="rotate90" src={img1}/>
+            <img loading="lazy" alt="" className="rotate90" src={img2}/>
+            <img loading="lazy" alt="" src={img3}/>
+            <img loading="lazy" alt="" src={img4}/>
+            <img loading="lazy" alt="" src={img5}/>
+            <img loading="lazy" alt="" src={img6}/>
             <Footer />
         </div>
     );

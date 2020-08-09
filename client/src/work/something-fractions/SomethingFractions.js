@@ -23,9 +23,9 @@ function SomethingFractions() {
                 Readings: Kat Capel<br/>
                 Music: Henri &amp; Tyreise KERslake, Isobel D'cruz, Arse'inns Inferno, Coachella<br/>
             </p>
-            <img alt=""  src={img1}/>
-            <img alt=""  src={img2}/>
-            <img alt=""  src={img3}/>
+            <img loading="lazy" alt=""  src={img1}/>
+            <img loading="lazy" alt=""  src={img2}/>
+            <img loading="lazy" alt=""  src={img3}/>
             <Footer />
         </div>
     );

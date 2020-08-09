@@ -19,7 +19,7 @@ function LongLegs() {
             </a>
             </p>
             <img alt="she's got long legs" src={img1}/>
-            <img alt="clipboard floorplan" src={img2}/>
+            <img loading="lazy" alt="clipboard floorplan" src={img2}/>
             <Footer />
         </div>
     );

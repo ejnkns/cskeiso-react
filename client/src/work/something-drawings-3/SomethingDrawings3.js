@@ -33,9 +33,9 @@ function SomethingDrawings3() {
                 initiative runs workshops, readings, lectures and exhibition events.
             </p>
             <Player url={url} />
-            <img alt="" src = {img3}/> 
-            <img alt="" src = {img2}/> 
-            <img alt="" src = {img1}/> 
+            <img loading="lazy" alt="" src = {img3}/> 
+            <img loading="lazy" alt="" src = {img2}/> 
+            <img loading="lazy" alt="" src = {img1}/> 
             <Footer />
         </div>
     )
