@@ -92,8 +92,12 @@
 .header {
     padding-top: 2em;
     padding-bottom: 2em;
-    width: clamp(130px, 25vw, 260px);
-    height: auto;
+}
+
+.header-img {
+    height: clamp(3vw,7em,15vw);
+
+    width: auto;
 }
 
 .footer {

@@ -6,14 +6,14 @@ import withBorder from './with-border.jpg';
 function Header() {
   return (
     <div className="header">
-      <A href="/">
-        <img 
-          className="header-img" 
-          alt="logo" 
-          src={withBorder} 
-          width="100%"
-        />
-      </A>
+        <A href="/">
+          <img 
+            rel="preload"
+            className="header-img" 
+            alt="logo" 
+            src={withBorder} 
+          />
+        </A>
     </div>
   );
 }
