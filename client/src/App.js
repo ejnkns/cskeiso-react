@@ -1,17 +1,14 @@
-import React from 'react';
-import { useRoutes } from 'hookrouter';
-import routes from './Routes';
-import NotFoundPage from './NotFoundPage';
+import React from "react";
+import { useRoutes } from "hookrouter";
+import routes from "./Routes";
+import NotFoundPage from "./NotFoundPage";
 
 function App() {
   const routeResult = useRoutes(routes);
 
   return (
     <div className="app-container">
-      {routeResult
-        ? routeResult
-        : <NotFoundPage />
-      } 
+      {routeResult ? routeResult : <NotFoundPage />}
     </div>
   );
 }
