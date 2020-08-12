@@ -3,14 +3,12 @@ import "../App.css";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 import TwoColumns from "../common/TwoColumns";
-import Menu from "../common/Menu";
 import { A } from "hookrouter";
 
 function Audio() {
   return (
     <div className="audio">
-      <Menu page="audio" />
-      <Header />
+      <Header page="audio" />
       <TwoColumns
         Column1="live reading"
         Column2="music / mixes"

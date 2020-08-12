@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
-import Menu from "../../common/Menu";
 import Footer from "../../common/Footer";
 import Player from "../../common/Player";
 import img1 from "./Westspace_Extra-8.jpg";
@@ -13,8 +12,7 @@ function MeowTV() {
   var url4 = "https://www.youtube.com/embed/UhsFJ3-q7Mc";
   return (
     <div>
-      <Menu page="work" />
-      <Header />
+      <Header page="work" />
       <p>
         Meow is an artist run initiative co-directed by: Calum Lockey, Hana
         Earles, &amp; Brennan Olver. Meow exhibited the work of four Melbourne

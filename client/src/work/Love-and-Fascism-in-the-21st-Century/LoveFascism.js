@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
-import Menu from "../../common/Menu";
 import Footer from "../../common/Footer";
 import Player from "../../common/Player";
 import img1 from "./scripts1.jpg";
@@ -17,8 +16,7 @@ import img9 from "./48_edited.jpg";
 function LoveFascism() {
   return (
     <div>
-      <Menu page="work" />
-      <Header />
+      <Header page="work" />
       <p>
         Carmen-Sibha Keiso&rsquo;s debut feature-length film &lsquo;Love &amp;
         Fascism in the 21st Century&rsquo; is a

@@ -4,13 +4,11 @@ import "../App.css";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 import TwoColumns from "../common/TwoColumns";
-import Menu from "../common/Menu";
 
 function Work() {
   return (
     <div className="work">
-      <Menu page="work" />
-      <Header />
+      <Header page="work" />
       <TwoColumns
         Column1="Exhibition"
         Column2="Curation"

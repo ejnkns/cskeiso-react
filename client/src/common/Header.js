@@ -1,14 +1,18 @@
 import React from "react";
 import { A } from "hookrouter";
 import "../App.css";
+import Menu from "./Menu";
 import withBorder from "./with-border.jpg";
 
-function Header() {
+function Header({ page }) {
   return (
-    <div className="header">
-      <A href="/">
-        <img rel="preload" className="header-img" alt="logo" src={withBorder} />
-      </A>
+    <div>
+      <Menu page={page} />
+      <div className="header">
+        <A href="/">
+          <img rel="preload" className="header-img" alt="logo" src={withBorder} />
+        </A>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
-import Menu from "../../common/Menu";
 import Footer from "../../common/Footer";
 import Player from "../../common/Player";
 
@@ -9,8 +8,7 @@ function BangBang() {
   var url = "https://vimeo.com/112134680";
   return (
     <div>
-      <Menu page="work" />
-      <Header />
+      <Header page="work" />
       <p>
         Video footage of a girl wearing an ‘L O V E’ skirt positioned in the
         corner of a 3x2 studio space. Once the recording device is turned on,

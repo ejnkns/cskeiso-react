@@ -6,7 +6,7 @@ import CV from "./CARMENKEISO_CV_28_07_2020.pdf";
 function Menu(props) {
   function isSelected(page) {
     if (page === props.page) {
-      return "i";
+      return "u";
     } else {
       return "opaque";
     }
@@ -14,42 +14,35 @@ function Menu(props) {
 
   return (
     <div className="menu">
-      <div>
-        <div className="home-table home-below">
-          <span>
-            <A className={isSelected("work")} href="/work">
-              {" "}
-              WORK
-            </A>
-          </span>
-          <span>
-            <A className={isSelected("text")} href="/text">
-              TEXT
-            </A>
-          </span>
-          <span>
-            <A className={isSelected("audio")} href="/audio">
-              {" "}
-              AUDIO
-            </A>
-          </span>
-          <a
-            className="opaque"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={CV}
-          >
-            CV
-          </a>
-        </div>
-        <A
-          className={"home-below right " + isSelected("readtheroom")}
-          href="./READTHEROOM"
-        >
-          {" "}
-          READTHEROOM
+      <span>
+        <A className={isSelected("work")} href="/work">
+          Work
         </A>
-      </div>
+      </span>
+      <span>
+        <A className={isSelected("text")} href="/text">
+          Text
+        </A>
+      </span>
+      <span>
+        <A className={isSelected("audio")} href="/audio">
+          Audio
+        </A>
+      </span>
+      <a
+        className="opaque"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={CV}
+      >
+        CV
+      </a>
+      <A
+        className={isSelected("readtheroom")}
+        href="./READTHEROOM"
+      >
+        Readtheroom
+        </A>
     </div>
   );
 }

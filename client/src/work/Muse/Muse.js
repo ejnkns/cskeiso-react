@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
-import Menu from "../../common/Menu";
 import Footer from "../../common/Footer";
 import Player from "../../common/Player";
 import img1 from "./muse-1.jpg";
@@ -16,8 +15,7 @@ function Muse() {
   var url2 = "https://player.vimeo.com/video/370806768";
   return (
     <div>
-      <Menu page="work" />
-      <Header />
+      <Header page="work" />
       <p>
         Trapped in her own malaise, a depressed girl tries to go for a walk in
         Brunswick thinking she is in a French new-wave film, yet after a series

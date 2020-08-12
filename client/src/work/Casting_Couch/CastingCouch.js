@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
-import Menu from "../../common/Menu";
 import Footer from "../../common/Footer";
 import img1 from "./casting-couch-1.png";
 import img2 from "./casting-couch-2.jpg";
@@ -10,8 +9,7 @@ import img3 from "./casting-couch-3.jpg";
 function CastingCouch() {
   return (
     <div>
-      <Menu page="work" />
-      <Header />
+      <Header page="work" />
       <p>
         Casting Couch - 2020
         <br />

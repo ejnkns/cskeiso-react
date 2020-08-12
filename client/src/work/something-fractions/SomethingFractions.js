@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
-import Menu from "../../common/Menu";
 import Footer from "../../common/Footer";
 import img1 from "./somethingfractions.jpeg";
 import img2 from "./somethingfractions1.jpeg";
@@ -10,8 +9,7 @@ import img3 from "./SF1.jpg";
 function SomethingFractions() {
   return (
     <div>
-      <Menu page="work" />
-      <Header />
+      <Header page="work" />
       <p>
         28th April 2017
         <br />

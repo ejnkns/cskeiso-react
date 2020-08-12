@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
-import Menu from "../../common/Menu";
 import Footer from "../../common/Footer";
 import Player from "../../common/Player";
 import img1 from "./WAYS1.jpg";
@@ -12,8 +11,7 @@ function FiveWays() {
   var url = "https://vimeo.com/440788546";
   return (
     <div>
-      <Menu page="work" />
-      <Header />
+      <Header page="work" />
       <p>
         Street theatre performance commissioned by the Faculty of Music and Fine
         Arts, at The University of Melbourne.

@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
-import Menu from "../../common/Menu";
 import Footer from "../../common/Footer";
 import Player from "../../common/Player";
 import img1 from "./catalogue.jpg";
@@ -14,8 +13,7 @@ function SomethingDrawings1() {
   var url = "https://player.vimeo.com/video/341499729";
   return (
     <div>
-      <Menu page="work" />
-      <Header />
+      <Header page="work" />
       <h1>'SOmething Drawings1' READTHEROOM</h1>
       <p>
         Opening reception for Something Drawings series1 presented by Read the

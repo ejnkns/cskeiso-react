@@ -1,14 +1,12 @@
 import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
-import Menu from "../../common/Menu";
 import Footer from "../../common/Footer";
 
 function HardToRead() {
   return (
     <div>
-      <Menu page="work" />
-      <Header />
+      <Header page="work" />
       <p>
         Reading for&nbsp;
         <a href="https://soundcloud.com/hard-to-read">Hard To Read</a>
