@@ -14,10 +14,8 @@ function FiveWays() {
       <Header page="work" />
       <p>
         Street theatre performance commissioned by the Faculty of Music and Fine
-        Arts, at The University of Melbourne.
-        <br />
-        Exhibited as part of the First Commissions showcase at the Martin Myer
-        Arena.
+        Arts, at The University of Melbourne. Exhibited as part of the First
+        Commissions showcase at the Martin Myer Arena.
         <br />
         Completed in April 2019 for the&nbsp;
         <a

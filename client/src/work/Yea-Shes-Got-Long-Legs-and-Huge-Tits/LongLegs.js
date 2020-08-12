@@ -11,11 +11,11 @@ function LongLegs() {
     <div>
       <Header page="work" />
       <p>
-        Yea she's got long legs and huge tits
-        <br />
         <a target="_blank" rel="noopener noreferrer" href={LongLegsPDF}>
-          PDF
+          Yea she's got long legs and huge tits
         </a>
+        <br />
+        PDF
       </p>
       <img alt="she's got long legs" src={img1} />
       <img loading="lazy" alt="clipboard floorplan" src={img2} />

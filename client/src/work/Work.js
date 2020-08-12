@@ -105,7 +105,7 @@ function Rows2() {
         </A>
         <br />
         <br />
-        <A href="/work/The-Beige-Show">
+        <A href="/work/My-Beige-Girl">
           The Beige Show,
           <span className="right">VCA Student Gallery</span>
         </A>

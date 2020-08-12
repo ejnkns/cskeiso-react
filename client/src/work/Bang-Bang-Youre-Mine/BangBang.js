@@ -18,7 +18,7 @@ function BangBang() {
         pistol/hand-gun, and 2 shotguns, each with a unique sound,
         simultaneously shot &amp; vocally interpreted by the girl. Sampled audio
         bites are overlaid to enhance the impact of these acts, elevating its
-        artificiality. <br />
+        artificiality.
         The act ends and the girl reverts to a neutral stance in the studio
         corner and turns off the recording device.
       </p>

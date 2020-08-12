@@ -20,12 +20,10 @@ function SomethingFractions() {
         Presented by Carmen-Sibha Keiso
         <br />
         <br />
-        <br />
         Readings: Kat Capel
         <br />
         Music: Henri &amp; Tyreise KERslake, Isobel D'cruz, Arse'inns Inferno,
         Coachella
-        <br />
       </p>
       <img loading="lazy" alt="" src={img1} />
       <img loading="lazy" alt="" src={img2} />
