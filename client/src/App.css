@@ -1,3 +1,7 @@
+:root {
+  --text-blue: #3131ff;
+}
+
 .right {
   float: right;
 }
@@ -68,7 +72,7 @@
 .home-title {
   font-weight: bold;
   font-style: italic;
-  color: blue;
+  color: var(--text-blue);
   font-size: min(max(16px, 3vw), 28px);
   background-color: #aaaaaa;
 }
@@ -77,7 +81,7 @@
   font-weight: bold;
   font-style: italic;
   font-size: min(max(12px, 2vw), 20px);
-  color: blue;
+  color: var(--text-blue);
 }
 
 .home-table {
@@ -206,7 +210,7 @@ a {
 
 A:visited,
 a:visited {
-  color: blue;
+  color: var(--text-blue);
 }
 
 A:hover,
