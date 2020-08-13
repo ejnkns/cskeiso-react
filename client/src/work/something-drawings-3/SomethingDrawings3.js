@@ -18,6 +18,7 @@ function SomethingDrawings3() {
         <a href="https://www.instagram.com/readtheroom_/">
           @readtheroom_
         </a>
+        <br />
         Opening reception for Something Drawings Series3 presented by Read the
         Room. <br />
         With Alethea Everard’s presentation of the catalogue photo-essay / RTR
