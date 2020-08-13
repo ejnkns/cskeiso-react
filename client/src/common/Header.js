@@ -10,7 +10,7 @@ function Header({ page }) {
       <Menu page={page} />
       <div className="header">
         <A href="/">
-          <img rel="preload" className="header-img" alt="logo" src={withBorder} />
+          <img rel="preload" className="header-img yellow-shadow" alt="logo" src={withBorder} />
         </A>
       </div>
     </div>

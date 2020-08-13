@@ -13,20 +13,20 @@ function FiveWays() {
     <div>
       <Header page="work" />
       <p>
-        Street theatre performance commissioned by the Faculty of Music and Fine
-        Arts, at The University of Melbourne. Exhibited as part of the First
-        Commissions showcase at the Martin Myer Arena.
-        <br />
-        Completed in April 2019 for the&nbsp;
+        '5 Ways’: Street Theatre performance completed for a commission by the Faculty of Music and Fine Arts,
+        at The University of Melbourne. It was exhibited as part of the First Commissions showcase at the Martin
+        Myer Arena and for the Keith &amp; Elisabeth Murdoch Travelling Fellowship exhibition at The Margaret
+        Lawrence Gallery. As seen in two parts on the
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://firstcommissions.com.au/titanic/carmen-sibha-keiso#response"
         >
-          firstcommissions.com.au
+          &nbsp;firstcommissions.com.au&nbsp;
         </a>
-        &nbsp;online gallery, where the video-document and transcript are
-        available.
+        online gallery, where the video-
+        document and action-transcript are available.
+        <br />
       </p>
       <Player url={url} />
       <br />

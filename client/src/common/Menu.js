@@ -6,7 +6,7 @@ import CV from "./CARMENKEISO_CV_28_07_2020.pdf";
 function Menu(props) {
   function isSelected(page) {
     if (page === props.page) {
-      return "u";
+      return "u b";
     } else {
       return "opaque";
     }
@@ -41,7 +41,7 @@ function Menu(props) {
         className={isSelected("readtheroom")}
         href="./READTHEROOM"
       >
-        Readtheroom
+        ReadtheRoom
         </A>
     </div>
   );

@@ -16,17 +16,20 @@ function SomethingDrawings2() {
       <Header page="work" />
       <h1>'SOmething Drawings2' READTHEROOM</h1>
       <p>
+        6.8.2019<br />
+        <a href="https://www.instagram.com/readtheroom_/">
+          @readtheroom_
+        </a>
+        <br /><br />
         Opening reception for Something Drawings Series2 presented by Read the
         Room. <br />
         With Audrey Schmidt’s presentation of the catalogue text / RTR lecture
         series. <br />
         Curated by Carmen-Sibha Keiso <br />
-        6.8.2019
         <br />
-        @readtheroom_ <br />
-        ANDER RENNICK - BRIGHID FITZGERALD - DOUGLAS MAXTED - GEORGE
-        EGERTON-WARBURTON - LORILEE YANG - NIK LEE - VICTORIA TODOROV - ZOE
-        JACKSON - AUDREY SCHMIDT <br />
+        ANDER RENNICK - BRIGHID FITZGERALD - DOUGLAS MAXTED - <br />
+        GEORGE EGERTON-WARBURTON - LORILEE YANG - NIK LEE - <br />
+        VICTORIA TODOROV - ZOE JACKSON - AUDREY SCHMIDT <br />
         <br />
         <br />
         'Read the Room' is an expanded literary practice space focusing on

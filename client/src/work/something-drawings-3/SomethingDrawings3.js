@@ -14,21 +14,20 @@ function SomethingDrawings3() {
       <Header page="work" />
       <h1>'SOmething Drawings3' READTHEROOM</h1>
       <p>
+        22.10.2019 <br />
+        <a href="https://www.instagram.com/readtheroom_/">
+          @readtheroom_
+        </a>
         Opening reception for Something Drawings Series3 presented by Read the
         Room. <br />
         With Alethea Everard’s presentation of the catalogue photo-essay / RTR
         lecture series. <br />
         <br />
-        Curated by Carmen-Sibha Keiso
+        Curated by Carmen-Sibha Keiso <br />
         <br />
-        22.10.2019
-        <br />
-        <br />
-        @readtheroom_ <br />
-        <br />
-        MAFFEW LINDE - DOMINIC SARGENT - LEILEI KUNG - BETH DOWNING - NUNZIO
-        MADDEN - DIGBY HOUGHTON - JOSH KRUM - ANTONIA ELLIS - ALETHEA EVERARD{" "}
-        <br />
+        MAFFEW LINDE - DOMINIC SARGENT - LEILEI KUNG - <br />
+        BETH DOWNING - NUNZIO MADDEN - DIGBY HOUGHTON - <br />
+        JOSH KRUM - ANTONIA ELLIS - ALETHEA EVERARD <br />
         <br />
         'Read the Room' is an expanded literary practice space focusing on
         writers and artists working both on and off the page. Co-directed by

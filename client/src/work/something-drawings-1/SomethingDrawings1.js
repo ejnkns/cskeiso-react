@@ -16,28 +16,18 @@ function SomethingDrawings1() {
       <Header page="work" />
       <h1>'SOmething Drawings1' READTHEROOM</h1>
       <p>
+        28.5.2019<br />
+        <a href="https://www.instagram.com/readtheroom_/">
+          @readtheroom_
+        </a>
+        <br /><br />
         Opening reception for Something Drawings series1 presented by Read the
-        Room in Melbourne, Spencer Lai lecture performance of catalogue text.
+        Room in Melbourne, Spencer Lai lecture performance of catalogue text.<br />
         Curated by Carmen-Sibha Keiso <br />
-        28.5.2019
         <br />
-        <br />
-        DAVID BORG
-        <br />
-        BILLY BOB COULTHURST
-        <br />
-        ABELLA D'ADAMO
-        <br />
-        ELLEN FAIRBAIRN
-        <br />
-        MADARA PAULA GRI&#310;E
-        <br />
-        BRENNAN OLVER
-        <br />
-        JASMINE PICKUP
-        <br />
-        BRITTANY ROSE WYPER
-        <br />
+        DAVID BORG - BILLY BOB COULTHUR - ABELLA D'ADAMO - <br />
+        ELLEN FAIRBAIRN - MADARA PAULA GRI&#310;E - BRENNAN OLVER - <br />
+        JASMINE PICKUP - BRITTANY ROSE WYPER <br />
         <br />
         'Read the Room' is an expanded literary practice space focusing on
         writers and artists working both on an off the page. Co-directed by Kat
