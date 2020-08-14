@@ -204,6 +204,7 @@ a:active {
 
 A,
 a {
+  color: var(--text-blue);
   text-decoration: inherit;
   font-size: inherit;
 }

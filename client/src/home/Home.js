@@ -43,9 +43,9 @@ function Above() {
 
 function Below() {
   return (
-    <div>
+    <div className="home-below">
       <div>
-        <div className="home-table home-below">
+        <div className="home-table">
           <span>
             <A href="/work"> WORK</A>
           </span>
@@ -60,7 +60,7 @@ function Below() {
             CV
           </a>
         </div>
-        <A className="home-below right" href="./READTHEROOM">
+        <A className="right" href="./READTHEROOM">
           {" "}
           READTHEROOM
         </A>
