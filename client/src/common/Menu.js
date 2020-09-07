@@ -1,7 +1,7 @@
 import React from "react";
 import { A } from "hookrouter";
 import "../App.css";
-import CV from "./CARMENKEISO_CV_28_07_2020.pdf";
+import CV from "./CARMENKEISO_CV_06_09_2020.pdf"
 
 function Menu(props) {
   function isSelected(page) {

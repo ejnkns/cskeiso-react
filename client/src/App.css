@@ -62,6 +62,7 @@
   font-style: italic;
   padding-left: 1px;
   padding-right: 1em;
+  font-size: clamp(10px, 3vw, 16px);
 }
 
 .home-above {
@@ -73,14 +74,14 @@
   font-weight: bold;
   font-style: italic;
   color: var(--text-blue);
-  font-size: min(max(16px, 3vw), 28px);
+  font-size: clamp(16px, 3vw, 28px);
   background-color: #aaaaaa;
 }
 
 .home-email {
   font-weight: bold;
   font-style: italic;
-  font-size: min(max(12px, 2vw), 20px);
+  font-size: clamp(12px, 2vw, 20px);
   color: var(--text-blue);
 }
 
@@ -99,7 +100,7 @@
 .home-below {
   padding-top: 0.2em;
   font-weight: bold;
-  font-size: min(max(12px, 2vw), 20px);
+  font-size: clamp(12px, 2vw, 20px);
 }
 
 .fallback-div {
@@ -122,8 +123,8 @@
 }
 
 .header-img {
-  height: min(max(3vw, 8em), 18vw);
-  width: auto;
+  height: auto;
+  width: clamp(180px, 53vw, 280px);
 }
 
 .footer {
@@ -179,12 +180,12 @@ h2 {
   font-family: serif;
   font-weight: bold;
   font-style: italic;
-  font-size: min(max(12px, 3vw), 20px);
+  font-size: clamp(12px, 3vw, 20px);
 }
 
 p {
   font-style: italic;
-  font-size: min(max(0.7em, 1em), 5em);
+  font-size: clamp(0.7em, 1em, 5em);
   margin: 5% 10% 5% 10%;
 }
 

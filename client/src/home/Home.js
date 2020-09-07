@@ -7,7 +7,7 @@ import "../App.css";
 import Footer from "../common/Footer";
 import Player from "../common/Player";
 import logoVideo from "./movie.mp4";
-import CV from "../common/CARMENKEISO_CV_28_07_2020.pdf";
+import CV from "../common/CARMENKEISO_CV_06_09_2020.pdf";
 
 function Home() {
   useEffect(() => {

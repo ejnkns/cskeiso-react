@@ -27,19 +27,47 @@ function Rows1() {
         <a
           target="_blank"
           rel="noopener noreferrer"
+          href="https://www.mixcloud.com/rebootfm/tfbaug/"
+        >
+          An Assemblage of Dead Things
+        </a>
+        <br />
+          Tales From Beneath,  
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://reboot.fm/">
+            &nbsp;Reboot.fm
+        </a>
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://createsend.com/t/d-C14B86E985F65E382540EF23F30FEDED"
+        >
+          Mini Audio Library
+        </a>
+        <br />
+          MUMA Online, Monash University 
+        <br />
+        <br />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://soundcloud.com/joshua-edward-330824759/iedwreading-series-one-new-york"
         >
           ie - dw reading series one
         </a>
         <br />
-        IchikawaEdward
+          IchikawaEdward
         <br />
         <br />
         <A target="_blank" rel="noopener noreferrer" href="/audio/Hard-To-Read">
           Diana Di Prima Revolutionary Letters,
         </A>
         <br />
-        Hard to Read, Montez Press Radio
+          Hard to Read, Montez Press Radio
         <br />
         <br />
         <a
@@ -50,7 +78,7 @@ function Rows1() {
           On Love &amp; Fascism: The Cultivated Self
         </a>
         <br />
-        Writing &amp; Concept, SIGNAL Artspace
+          Writing &amp; Concept, SIGNAL Artspace
         <br />
         <br />
         <a
@@ -61,7 +89,7 @@ function Rows1() {
           Line 4 Podcast{" "}
         </a>
         <br />
-        Lebowskis
+          Lebowskis
       </p>
     </div>
   );

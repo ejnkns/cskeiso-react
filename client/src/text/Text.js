@@ -12,7 +12,7 @@ function Text() {
       <Header page="text" />
       <TwoColumns
         Column1="Others"
-        Column2="Selected Texts"
+        Column2="myself"
         Rows1={Rows1}
         Rows2={Rows2}
       />
