@@ -5,16 +5,18 @@ import Footer from "../common/Footer";
 import TwoColumns from "../common/TwoColumns";
 import { A } from "hookrouter";
 
+const twoColumnsProps = {
+  Column1: "live reading",
+  Column2: "music / mixes",
+  Rows1: Rows1,
+  Rows2: Rows2
+}
+
 function Audio() {
   return (
     <div className="audio">
       <Header page="audio" />
-      <TwoColumns
-        Column1="live reading"
-        Column2="music / mixes"
-        Rows1={Rows1}
-        Rows2={Rows2}
-      />
+      <TwoColumns {...twoColumnsProps}/>
       <Footer />
     </div>
   );

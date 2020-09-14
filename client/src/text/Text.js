@@ -6,20 +6,23 @@ import TwoColumns from "../common/TwoColumns";
 import artAlmanac from "./art-almanac-hatched-pica.png";
 const storyHouseSelect = "./story-house-select/story_house_select.html";
 
+const twoColumnsProps = {
+  Column1: "others",
+  Column2: "myself",
+  Rows1: Rows1,
+  Rows2: Rows2
+}
+
 function Text() {
   return (
     <div className="text">
       <Header page="text" />
-      <TwoColumns
-        Column1="Others"
-        Column2="myself"
-        Rows1={Rows1}
-        Rows2={Rows2}
-      />
+      <TwoColumns {...twoColumnsProps} />
       <Footer />
     </div>
   );
 }
+
 
 function Rows1() {
   return (
@@ -138,7 +141,7 @@ function Rows2() {
           href="./love-and-fascism-script.pdf"
         >
           {" "}
-          Love & Fascism in the 21st Century Script
+          Love &amp; Fascism in the 21st Century Script
         </a>
         <br />
         PDF

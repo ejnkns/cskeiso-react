@@ -5,7 +5,6 @@ import NotFoundPage from "./NotFoundPage";
 
 function App() {
   const routeResult = useRoutes(Routes);
-  // get broswer 
 
   return (
     <div className="app-container">

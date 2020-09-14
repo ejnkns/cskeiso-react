@@ -5,16 +5,18 @@ import Header from "../common/Header";
 import Footer from "../common/Footer";
 import TwoColumns from "../common/TwoColumns";
 
+const twoColumnsProps = {
+  Column1: "exhibition",
+  Column2: "curation",
+  Rows1: Rows1,
+  Rows2: Rows2
+}
+
 function Work() {
   return (
     <div className="work">
       <Header page="work" />
-      <TwoColumns
-        Column1="Exhibition"
-        Column2="Curation"
-        Rows1={Rows1}
-        Rows2={Rows2}
-      />
+      <TwoColumns {...twoColumnsProps}/>
       <Footer />
     </div>
   );

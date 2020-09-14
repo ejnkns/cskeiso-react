@@ -3,9 +3,9 @@ import { A } from "hookrouter";
 import "../App.css";
 import CV from "./CARMENKEISO_CV_06_09_2020.pdf"
 
-function Menu(props) {
-  function isSelected(page) {
-    if (page === props.page) {
+function Menu({ page }) {
+  function isSelected(selectedPage) {
+    if (selectedPage === page) {
       return "u b";
     } else {
       return "opaque";
