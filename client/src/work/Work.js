@@ -1,11 +1,10 @@
 import React from "react";
 import { A } from "hookrouter";
 import "../App.css";
-import Header from "../common/Header";
-import Footer from "../common/Footer";
-import TwoColumns from "../common/TwoColumns";
+import TwoColumnPageContainer from "../common/TwoColumnPageContainer";
 
 const twoColumnsProps = {
+  page: "work",
   Column1: "exhibition",
   Column2: "curation",
   Rows1: Rows1,
@@ -14,11 +13,7 @@ const twoColumnsProps = {
 
 function Work() {
   return (
-    <div className="work">
-      <Header page="work" />
-      <TwoColumns {...twoColumnsProps}/>
-      <Footer />
-    </div>
+    <TwoColumnPageContainer {...twoColumnsProps}/>
   );
 }
 

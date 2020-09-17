@@ -1,11 +1,10 @@
 import React from "react";
 import "../App.css";
-import Header from "../common/Header";
-import Footer from "../common/Footer";
-import TwoColumns from "../common/TwoColumns";
 import { A } from "hookrouter";
+import TwoColumnPageContainer from "../common/TwoColumnPageContainer";
 
 const twoColumnsProps = {
+  page: "audio",
   Column1: "live reading",
   Column2: "music / mixes",
   Rows1: Rows1,
@@ -14,11 +13,7 @@ const twoColumnsProps = {
 
 function Audio() {
   return (
-    <div className="audio">
-      <Header page="audio" />
-      <TwoColumns {...twoColumnsProps}/>
-      <Footer />
-    </div>
+    <TwoColumnPageContainer {...twoColumnsProps}/>
   );
 }
 

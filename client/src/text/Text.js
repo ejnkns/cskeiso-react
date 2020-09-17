@@ -1,12 +1,11 @@
 import React from "react";
 import "../App.css";
-import Header from "../common/Header";
-import Footer from "../common/Footer";
-import TwoColumns from "../common/TwoColumns";
 import artAlmanac from "./art-almanac-hatched-pica.png";
+import TwoColumnPageContainer from "../common/TwoColumnPageContainer";
 const storyHouseSelect = "./story-house-select/story_house_select.html";
 
-const twoColumnsProps = {
+const twoColumnProps = {
+  page: "text",
   Column1: "others",
   Column2: "myself",
   Rows1: Rows1,
@@ -15,11 +14,7 @@ const twoColumnsProps = {
 
 function Text() {
   return (
-    <div className="text">
-      <Header page="text" />
-      <TwoColumns {...twoColumnsProps} />
-      <Footer />
-    </div>
+    <TwoColumnPageContainer {...twoColumnProps}/>
   );
 }
 
@@ -127,10 +122,8 @@ function Rows2() {
           There Is No Art In Heaven Publication, Min Report
         </a>
         <br />
-        <i>
           These Are My Confessions Pt.3 Even Though No One Seems To Be Talking
           About Usher Anymore
-        </i>
         <br />
         Carmen-Sibha Keiso
         <br />
