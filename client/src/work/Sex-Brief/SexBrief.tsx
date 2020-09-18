@@ -2,10 +2,10 @@ import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
 import Footer from "../../common/Footer";
-import img1 from "./1_SB_jessie.JPG";
-import img2 from "./2-SB-jessie1.JPG";
-import img3 from "./3_SexBriefClipboard0.JPG";
-import img4 from "./4_SexBriefClipboard1.JPG";
+import img1 from "./1_SB_jessie.jpg";
+import img2 from "./2-SB-jessie1.jpg";
+import img3 from "./3_SexBriefClipboard0.jpg";
+import img4 from "./4_SexBriefClipboard1.jpg";
 import img5 from "./5_SB_jessie0.jpg";
 import img6 from "./6_Sb_evelyn1.jpg";
 
