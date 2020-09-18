@@ -3,8 +3,10 @@ import { A } from "hookrouter";
 import "../App.css";
 import CV from "./CARMENKEISO_CV_06_09_2020.pdf"
 
-function Menu({ page }) {
-  function isSelected(selectedPage) {
+type MenuProps = { page: string }; /* could also use interface */
+
+function Menu({ page }: MenuProps) {
+  function isSelected(selectedPage: String) {
     if (selectedPage === page) {
       return "u b";
     } else {

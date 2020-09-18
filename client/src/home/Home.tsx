@@ -12,7 +12,9 @@ import CV from "../common/CARMENKEISO_CV_06_09_2020.pdf";
 function Home() {
   useEffect(() => {
     let el = document.querySelector(".fade-in");
-    el.classList.add("solid");
+    if (el) {
+      el.classList.add("solid");
+    }
   });
 
   return (

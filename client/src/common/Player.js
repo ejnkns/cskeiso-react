@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, useRef } from "react";
+import React, { Suspense, useRef } from "react";
 import "../App.css";
 /*
 const homePlaceholder = React.lazy(() =>
@@ -22,8 +22,6 @@ function Player({ url }) {
   );
 
   // fade-in videos
-  useEffect(() => {});
-
   let playerRef = useRef(null);
   function handleReady() {
     if (playerRef.current.getInternalPlayer()) {
