@@ -4,16 +4,15 @@ import { A } from "hookrouter";
 import TwoColumnPageContainer from "../common/TwoColumnPageContainer";
 
 const twoColumnsProps = {
-  page: "audio",
-  Column1: "live reading",
-  Column2: "music / mixes",
+  column1: "live reading",
+  column2: "music / mixes",
   Rows1: Rows1,
   Rows2: Rows2
 }
 
 function Audio() {
   return (
-    <TwoColumnPageContainer {...twoColumnsProps}/>
+    <TwoColumnPageContainer page="audio" {...twoColumnsProps}/>
   );
 }
 

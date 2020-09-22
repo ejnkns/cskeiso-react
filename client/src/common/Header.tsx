@@ -3,13 +3,13 @@ import { A } from "hookrouter";
 import "../App.css";
 import Menu from "./Menu";
 import withBorder from "./with-border.jpg";
+import { PageProps } from "./propTypes";
 
-interface HeaderProps { page: string }; 
 
-function Header({ page }: HeaderProps) {
+function Header(props: PageProps) {
   return (
     <div>
-      <Menu page={page} />
+      <Menu page={props.page} />
       <div className="header">
         <A href="/">
           <img className="header-img yellow-shadow" alt="logo" src={withBorder} />

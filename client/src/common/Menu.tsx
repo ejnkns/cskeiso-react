@@ -1,13 +1,13 @@
 import React from "react";
 import { A } from "hookrouter";
 import "../App.css";
-import CV from "./CARMENKEISO_CV_06_09_2020.pdf"
+import CV from "./CARMENKEISO_CV_06_09_2020.pdf";
+import { PageProps } from "./propTypes";
 
-type MenuProps = { page: string }; /* could also use interface */
 
-function Menu({ page }: MenuProps) {
-  function isSelected(selectedPage: String) {
-    if (selectedPage === page) {
+function Menu(props: PageProps) {
+  function isSelected(selectedPage: string) {
+    if (selectedPage === props.page) {
       return "u b";
     } else {
       return "opaque";

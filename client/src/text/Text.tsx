@@ -6,8 +6,8 @@ const storyHouseSelect = "./story-house-select/story_house_select.html";
 
 const twoColumnProps = {
   page: "text",
-  Column1: "others",
-  Column2: "myself",
+  column1: "others",
+  column2: "myself",
   Rows1: Rows1,
   Rows2: Rows2
 }

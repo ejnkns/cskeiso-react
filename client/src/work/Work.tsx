@@ -5,8 +5,8 @@ import TwoColumnPageContainer from "../common/TwoColumnPageContainer";
 
 const twoColumnsProps = {
   page: "work",
-  Column1: "exhibition",
-  Column2: "curation",
+  column1: "exhibition",
+  column2: "curation",
   Rows1: Rows1,
   Rows2: Rows2
 }
