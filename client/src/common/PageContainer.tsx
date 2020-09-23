@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import TwoColumns from "./TwoColumns";
 import { TwoColumnProps } from "./propTypes";
 
-function TwoColumnPageContainer(props: TwoColumnProps) {
+function PageContainer(props: TwoColumnProps) {
   return (
     <div className={props.page}>
         <Header page={props.page} /> 
@@ -15,4 +15,4 @@ function TwoColumnPageContainer(props: TwoColumnProps) {
   );
 }
 
-export default TwoColumnPageContainer;
+export default PageContainer;

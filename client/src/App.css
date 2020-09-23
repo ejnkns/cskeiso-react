@@ -130,9 +130,10 @@
 .footer {
   position: fixed;
   bottom: 0;
-  padding: 0 0 0.8em 0.8em;
-  right: 0.8em;
-  font-size: 0.8em;
+  right: 0;
+  padding: 0.4em;
+  font-size: 0.6em;
+  text-align: center;
 }
 
 .row-data {

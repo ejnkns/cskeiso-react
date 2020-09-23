@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import { A } from "hookrouter";
-import TwoColumnPageContainer from "../common/TwoColumnPageContainer";
+import PageContainer from "../common/PageContainer";
 
 const twoColumnsProps = {
   column1: "live reading",
@@ -12,7 +12,7 @@ const twoColumnsProps = {
 
 function Audio() {
   return (
-    <TwoColumnPageContainer page="audio" {...twoColumnsProps}/>
+    <PageContainer page="audio" {...twoColumnsProps}/>
   );
 }
 

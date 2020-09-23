@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import artAlmanac from "./art-almanac-hatched-pica.png";
-import TwoColumnPageContainer from "../common/TwoColumnPageContainer";
+import PageContainer from "../common/PageContainer";
 const storyHouseSelect = "./story-house-select/story_house_select.html";
 
 const twoColumnProps = {
@@ -14,7 +14,7 @@ const twoColumnProps = {
 
 function Text() {
   return (
-    <TwoColumnPageContainer {...twoColumnProps}/>
+    <PageContainer {...twoColumnProps}/>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { A } from "hookrouter";
 import "../App.css";
-import TwoColumnPageContainer from "../common/TwoColumnPageContainer";
+import PageContainer from "../common/PageContainer";
 
 const twoColumnsProps = {
   page: "work",
@@ -13,7 +13,7 @@ const twoColumnsProps = {
 
 function Work() {
   return (
-    <TwoColumnPageContainer {...twoColumnsProps}/>
+    <PageContainer {...twoColumnsProps}/>
   );
 }
 
