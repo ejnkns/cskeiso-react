@@ -21,7 +21,6 @@ function OneColumn(props: OneColumnProps) {
 
 function Content({ content }: ContentArray) {
     //let contentDiv: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> = <div></div>
-
     // might have to change type to React.FC
     let children: JSX.Element[] = [<div className="content-parent"></div>]
     for (let e of content) {
@@ -37,11 +36,6 @@ function Content({ content }: ContentArray) {
 function makeDiv(content: ContentObject): JSX.Element {
     let value = content.data;
     switch (content.contentType) {
-        case ContentTypes.Div: { 
-            return(
-                <div></div>
-            );
-        }
         case ContentTypes.Title: { 
             return(
                 <h1>{value}</h1>

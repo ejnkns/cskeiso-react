@@ -11,8 +11,6 @@ export type TwoColumnProps = {
 }
 
 export enum ContentTypes {
-    // plan to eventually not need div types, need to find a way to have links inside paras
-    Div,
     Title,
     Para,
     Link,
@@ -36,8 +34,8 @@ export class ContentObject {
 export class Para {
     content: (string|Link)[]
 
-    constructor(data: (string|Link)[]) {
-        this.content= data;
+    constructor(content: (string|Link)[]) {
+        this.content = content;
     }
 }
 

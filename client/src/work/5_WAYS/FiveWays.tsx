@@ -1,10 +1,15 @@
 import React from "react";
 import "../../App.css";
+import OneColumn from "../../common/OneColumn";
+import { ContentObject, ContentTypes, Link, OneColumnProps, Para } from "../../common/propTypes";
+import FiveWaysJSON from './FiveWays.json';
 import img1 from "./WAYS1.jpg";
 import img2 from "./WAYS2.jpg";
 import img3 from "./WAYS3.jpg";
-import OneColumn from "../../common/OneColumn";
-import { ContentObject, ContentTypes, Link, OneColumnProps, Para } from "../../common/propTypes";
+//const img1 = "./WAYS1.jpg";
+//const img2 = "./WAYS2.jpg";
+//const img3 = "./WAYS3.jpg";
+
 
 
 function FiveWays() {
@@ -13,13 +18,54 @@ function FiveWays() {
     page: "work",
     content: content
   }
+  // importing isn't enough, have to use to get react to load them
+  // so the links in FiveWays.json will work. 
+  //TODO make sure this works in build
+  // might have to move images to public folder?
+  const imgs = [img1, img2, img3];
   return (
     <OneColumn {...props} />
   );
 }
 
-
 function getContent(): ContentObject[] {
+  //let jsonObject = JSON.parse(json);
+  let json = FiveWaysJSON;
+  console.log("json = ");
+  console.log(json);
+  let len = Object.keys(FiveWaysJSON).length;
+  let c: ContentObject[] = [];
+  for (let i = 0; i < len; i++) {
+    let e = json[i];
+    console.log("e for iteration " + i + " is: ");
+    if (e.contentType !== ContentTypes.Para) {
+      // no nesting
+      console.log("not para type");
+      console.log(e);
+      c[i] = new ContentObject(e.contentType, e.data);
+    } else if(e.data instanceof Object) {
+      // have to check instance of or typescript doesn't like it
+      console.log("is para type");
+      console.log(e);
+      // nesting
+      let paraContent: (string | Link)[] = [];
+      e.data.content.forEach((el: string | Link) => {
+        if (typeof (el) == "string") {
+          paraContent.push(el);
+        } else {
+          paraContent.push(new Link(el.url, el.text));
+        }
+      c[i] = new ContentObject(e.contentType, new Para(paraContent));
+      });
+    }
+  }
+  console.log(c);
+  
+  return (c);
+}
+
+/*
+function getContentManual(): ContentObject[] {
   let content: ContentObject[] = [];
   let paraContent: (string | Link)[] = [
     `'5 Ways’: Street Theatre performance completed for a commission by the Faculty of Music and Fine Arts,
@@ -33,17 +79,17 @@ function getContent(): ContentObject[] {
       "online gallery, where the video-document and action-transcript are available."
   ];
   // I want to do something like:
-  /*
-  foreach(e of api.getContent("FiveWays")) {
-    content.push(new ContentObject(e));
-  }
-  */
+  //foreach(e of api.getContent("FiveWays")) {
+  //  content.push(new ContentObject(e));
+  //}
   content[0] = new ContentObject(ContentTypes.Para, new Para(paraContent)); 
   content[1] = new ContentObject(ContentTypes.Video, "https://vimeo.com/440788546");
   content[2] = new ContentObject(ContentTypes.Break, "");
   content[3] = new ContentObject(ContentTypes.Image, img1)
   content[4] = new ContentObject(ContentTypes.Image, img2)
   content[5] = new ContentObject(ContentTypes.Image, img3)
+  console.log(JSON.stringify(content));
   return (content);
 }
+*/
 export default FiveWays;
