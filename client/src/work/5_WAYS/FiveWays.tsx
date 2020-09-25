@@ -1,24 +1,40 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import "../../App.css";
 import OneColumn from "../../common/OneColumn";
-import { ContentObject, ContentTypes, Link, OneColumnProps, Para } from "../../common/propTypes";
-import FiveWaysJSON from './FiveWays.json';
+import { ContentObject, ContentTypes, Link, OneColumnProps, Para, jsonType } from "../../common/propTypes";
+import { downloadFile } from "../../common/GoogleCloud";
+//import { getContent } from "../../common/JsonToContent";
+//import FiveWaysJSON from './FiveWays.json';
 import img1 from "./WAYS1.jpg";
 import img2 from "./WAYS2.jpg";
 import img3 from "./WAYS3.jpg";
+const jsonPath = "https://storage.googleapis.com/cskeiso.appspot.com/work/5_WAYS/FiveWays.json"
 //const img1 = "./WAYS1.jpg";
 //const img2 = "./WAYS2.jpg";
 //const img3 = "./WAYS3.jpg";
-
-
-
+function getJson(url: string): ContentObject[] {
+  let content: ContentObject[] = [];
+  fetch(url)
+    .then(res => res.json())
+    .then((out) => {
+      let json = JSON.parse(out);
+      console.log('Checkout this JSON! ', out);
+    })
+    .catch(err => { throw err });
+  return (content);
+}
 function FiveWays() {
-  let content: ContentObject[] = getContent();
+  useEffect(() => {
+    getJson("http://api.jsoneditoronline.org/v1/docs/78cc00b3efab4c809a96058d450c0811/data")
+  }, [])
+  let content: ContentObject[] = getContentManual();
   let props: OneColumnProps = {
     page: "work",
     content: content
   }
-  // importing isn't enough, have to use to get react to load them
+
+  // importing isn't enough, have to refence to get react to load them
   // so the links in FiveWays.json will work. 
   //TODO make sure this works in build
   // might have to move images to public folder?
@@ -28,43 +44,6 @@ function FiveWays() {
   );
 }
 
-function getContent(): ContentObject[] {
-  //let jsonObject = JSON.parse(json);
-  let json = FiveWaysJSON;
-  console.log("json = ");
-  console.log(json);
-  let len = Object.keys(FiveWaysJSON).length;
-  let c: ContentObject[] = [];
-  for (let i = 0; i < len; i++) {
-    let e = json[i];
-    console.log("e for iteration " + i + " is: ");
-    if (e.contentType !== ContentTypes.Para) {
-      // no nesting
-      console.log("not para type");
-      console.log(e);
-      c[i] = new ContentObject(e.contentType, e.data);
-    } else if(e.data instanceof Object) {
-      // have to check instance of or typescript doesn't like it
-      console.log("is para type");
-      console.log(e);
-      // nesting
-      let paraContent: (string | Link)[] = [];
-      e.data.content.forEach((el: string | Link) => {
-        if (typeof (el) == "string") {
-          paraContent.push(el);
-        } else {
-          paraContent.push(new Link(el.url, el.text));
-        }
-      c[i] = new ContentObject(e.contentType, new Para(paraContent));
-      });
-    }
-  }
-  console.log(c);
-  
-  return (c);
-}
-
-/*
 function getContentManual(): ContentObject[] {
   let content: ContentObject[] = [];
   let paraContent: (string | Link)[] = [
@@ -79,7 +58,7 @@ function getContentManual(): ContentObject[] {
       "online gallery, where the video-document and action-transcript are available."
   ];
   // I want to do something like:
-  //foreach(e of api.getContent("FiveWays")) {
+ //foreach(e of api.getContent("FiveWays")) {
   //  content.push(new ContentObject(e));
   //}
   content[0] = new ContentObject(ContentTypes.Para, new Para(paraContent)); 
@@ -91,5 +70,4 @@ function getContentManual(): ContentObject[] {
   console.log(JSON.stringify(content));
   return (content);
 }
-*/
 export default FiveWays;

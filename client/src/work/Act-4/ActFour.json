@@ -1,0 +1,27 @@
+[
+    {
+        "contentType": 1,
+        "data": {
+            "content": [
+                {
+                    "url": "/static/media/act4.5ac06e2b.pdf",
+                    "text": "Act Four: Fragments"
+                },
+                "\n\r",
+                "PDF"
+            ]
+        }
+    },
+    {
+        "contentType": 3,
+        "data": "/static/media/Act4_1.9c053e2f.jpg"
+    },
+    {
+        "contentType": 3,
+        "data": "/static/media/Act4_2.716ceaed.jpg"
+    },
+    {
+        "contentType": 3,
+        "data": "/static/media/Act4_3.2145a245.jpg"
+    }
+]

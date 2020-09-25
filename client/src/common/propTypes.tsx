@@ -54,6 +54,20 @@ export type OneColumnProps = {
     content: ContentObject[];
 }
 
+export type jsonType =
+  ({
+    contentType: number;
+    data: {
+      content: (string | {
+        url: string;
+        text: string;
+      })[];
+    };
+  } | {
+    contentType: number;
+    data: string;
+  })[];
+
 export type PlayerProps = {
     url: string;
 }
