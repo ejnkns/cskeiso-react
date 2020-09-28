@@ -1,6 +1,6 @@
-import { downloadFile } from "./download";
-import { readFile, readFileSync, writeFile } from 'fs';
-import { ContentObject, ContentTypes, Link, Para } from "./propTypes";
+import { downloadFile } from "./utils/download";
+import { readFileSync, writeFile } from 'fs';
+import { ContentObject, ContentTypes, Link, Para } from "./utils/contentobjecttypes";
 
 const actFourUrl = "https://docs.google.com/document/d/1Xz3HjL7dJ-ab3bQnfqEFXFlZYxVBa_1MXV7WyLQ_iMg/export?format=txt"
 const actFourPath = "../client/src/work/Act-4/ActFour.txt";
@@ -12,13 +12,14 @@ const MATCH_URL_VIMEO = /vimeo\.com\/.+/;
 const LINE_BREAK = "(line break)"
 
 async function docsUrlToContentObjectArrayJSON(url: string, filePath: string): Promise<string> {
-    let content: ContentObject[] = [];
+
     const tempFilePath = filePath.split('.')[0] + ".temp.txt";
     await downloadFile(url, tempFilePath).catch(error => console.log(error));
     let data = readFileSync(tempFilePath, 'utf8');
     const imgRegex = /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i;
     const videoRegex = new RegExp(MATCH_URL_YOUTUBE.source + "|" + MATCH_URL_VIMEO.source);
 
+    let content: ContentObject[] = [];
     for (const line of data.split(/[\r\n]+/)) {
         console.log(line);
         if (line.match(imgRegex)) {
@@ -34,7 +35,7 @@ async function docsUrlToContentObjectArrayJSON(url: string, filePath: string): P
             let prevWord: string = null;
             let i = 0;
             paraArray.forEach((el: string) => {
-                el.trim();
+                el = el.trim();
                 if (prevWord && (el.substring(0, 4) === "http")) {
                     // line is a link
                     // remove previous word from paraContent
@@ -51,17 +52,13 @@ async function docsUrlToContentObjectArrayJSON(url: string, filePath: string): P
                 prevWord = (el.split(" ").slice(-1))[0];
                 i++;
             });
-            console.log("paraContent: ");
-            console.log(paraContent);
-            
             content.push(new ContentObject(ContentTypes.Para, new Para(paraContent)));
         }
-        console.log(content);
         
     }
     writeFile(filePath, JSON.stringify(content), (err) => {
         if (err) {
-            console.log(err);
+            console.error(err);
         }
     });
     //TODO: delete <filePath>.temp.txt file
