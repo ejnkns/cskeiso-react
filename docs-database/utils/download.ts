@@ -8,7 +8,6 @@ export async function downloadFile(url: string, filePath: string) {
 
     if (response.message.statusCode !== 200) {
         const err: Error = new Error(`Unexpected HTTP response: ${response.message.statusCode}`);
-        err["httpStatusCode"] = response.message.statusCode;
         throw err;
     }
 

@@ -3,11 +3,12 @@
         "contentType": 1,
         "data": {
             "content": [
+                "﻿Click here! -> ",
                 {
                     "url": "/static/media/act4.5ac06e2b.pdf",
                     "text": "Act Four: Fragments"
                 },
-                "\n\r",
+                "",
                 "PDF"
             ]
         }
