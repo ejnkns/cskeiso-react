@@ -2,33 +2,14 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "../../App.css";
 import OneColumn from "../../common/OneColumn";
-import { ContentObject, ContentTypes, Link, OneColumnProps, Para, jsonType } from "../../common/propTypes";
-import { downloadFile } from "../../common/GoogleCloud";
-//import { getContent } from "../../common/JsonToContent";
-//import FiveWaysJSON from './FiveWays.json';
+import { ContentObject, ContentTypes, Link, OneColumnProps, Para } from "../../common/propTypes";
+import { getContent } from "../../common/JsonToContent";
+import FiveWaysJSON from './FiveWays.json';
 import img1 from "./WAYS1.jpg";
 import img2 from "./WAYS2.jpg";
 import img3 from "./WAYS3.jpg";
-const jsonPath = "https://storage.googleapis.com/cskeiso.appspot.com/work/5_WAYS/FiveWays.json"
-//const img1 = "./WAYS1.jpg";
-//const img2 = "./WAYS2.jpg";
-//const img3 = "./WAYS3.jpg";
-function getJson(url: string): ContentObject[] {
-  let content: ContentObject[] = [];
-  fetch(url)
-    .then(res => res.json())
-    .then((out) => {
-      let json = JSON.parse(out);
-      console.log('Checkout this JSON! ', out);
-    })
-    .catch(err => { throw err });
-  return (content);
-}
 function FiveWays() {
-  useEffect(() => {
-    getJson("http://api.jsoneditoronline.org/v1/docs/78cc00b3efab4c809a96058d450c0811/data")
-  }, [])
-  let content: ContentObject[] = getContentManual();
+  let content: ContentObject[] = getContent(FiveWaysJSON);
   let props: OneColumnProps = {
     page: "work",
     content: content
@@ -44,6 +25,8 @@ function FiveWays() {
   );
 }
 
+
+/*
 function getContentManual(): ContentObject[] {
   let content: ContentObject[] = [];
   let paraContent: (string | Link)[] = [
@@ -67,7 +50,8 @@ function getContentManual(): ContentObject[] {
   content[3] = new ContentObject(ContentTypes.Image, img1)
   content[4] = new ContentObject(ContentTypes.Image, img2)
   content[5] = new ContentObject(ContentTypes.Image, img3)
-  console.log(JSON.stringify(content));
+  //console.log(JSON.stringify(content));
   return (content);
 }
+*/
 export default FiveWays;

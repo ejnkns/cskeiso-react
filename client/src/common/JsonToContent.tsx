@@ -24,3 +24,15 @@ export function getContent(json: jsonType): ContentObject[] {
     }
     return (c);
 }
+
+function getJson(url: string): ContentObject[] {
+  let content: ContentObject[] = [];
+  fetch(url)
+    .then(res => res.json())
+    .then((out) => {
+      let json = JSON.parse(out);
+      console.log('Checkout this JSON! ', out);
+    })
+    .catch(err => { throw err });
+  return (content);
+}
