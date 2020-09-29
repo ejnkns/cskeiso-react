@@ -2,8 +2,8 @@ import React from "react";
 import "../../App.css";
 import Header from "../../common/Header";
 import Footer from "../../common/Footer";
-import img1 from "./somethingfractions.jpeg";
-import img2 from "./somethingfractions1.jpeg";
+import img1 from "./somethingfractions.jpg";
+import img2 from "./somethingfractions1.jpg";
 import img3 from "./SF1.jpg";
 
 function SomethingFractions() {
