@@ -1,4 +1,4 @@
-import { Page } from "./contentobjecttypes";
+import { Page } from "./ContentTypes";
 
 const fiveWaysUrl = "https://docs.google.com/document/d/1KXAmis1n1FzduV6sNkzHhmWdInSfSBjIsH2wQXU0dn4/export?format=txt"
 const fiveWaysPath = "../client/src/work/5_WAYS/FiveWays.json";

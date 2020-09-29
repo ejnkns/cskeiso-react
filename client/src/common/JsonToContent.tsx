@@ -1,4 +1,5 @@
-import { ContentObject, Link, Para, ContentTypes, jsonType } from "./propTypes";
+import { ContentObject, Link, Para, ContentTypes} from "./ContentTypes";
+import { jsonType } from "./propTypes";
 
 export function getContent(json: jsonType): ContentObject[] {
     let len = json.length;

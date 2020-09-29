@@ -5,12 +5,12 @@ import img1 from "./Act4_1.jpg";
 import img2 from "./Act4_2.jpg";
 import img3 from "./Act4_3.jpg";
 import ActFourPDF from "./act4.pdf";
-import { ContentObject, OneColumnProps, ContentTypes, Para, Link } from "../../common/propTypes";
+import { ContentObject } from "../../common/ContentTypes";
+import { OneColumnProps } from "../../common/propTypes";
 import { getContent } from "../../common/JsonToContent";
 import ActFourJSON from "./ActFour.json";
 
 function ActFour() {
-  getContentManual();
   let content: ContentObject[] = getContent(ActFourJSON);
   let props: OneColumnProps = {
     page: "work",
@@ -26,6 +26,7 @@ function ActFour() {
   );
 }
 
+/*
 function getContentManual() {
   let content: ContentObject[] = [];
   let paraContent: (string | Link)[] = [
@@ -46,5 +47,6 @@ function getContentManual() {
   content[3] = new ContentObject(ContentTypes.Image, img3)
   console.log(JSON.stringify(content));
 }
+*/
 
 export default ActFour;

@@ -1,6 +1,6 @@
 import { downloadFile } from "./utils/download";
 import { readFileSync, writeFile } from 'fs';
-import { ContentObject, ContentTypes, Link, Para } from "../client/src/common/propTypes";
+import { ContentObject, ContentTypes, Link, Para } from "./utils/ContentTypes";
 
 const actFourUrl = "https://docs.google.com/document/d/1Xz3HjL7dJ-ab3bQnfqEFXFlZYxVBa_1MXV7WyLQ_iMg/export?format=txt"
 const actFourPath = "../client/src/work/Act-4/ActFour.json";
@@ -16,9 +16,10 @@ const MATCH_MARKDOWN_URL = /\[(.*?)\]\((.*?)\)/g; // match[0] = "(text)[url]", m
 const LINE_BREAK = "(line break)"
 const SPLIT_NEWLINE = /[\r\n]+/;
 
+// downloads a google doc as a taxt file, parses the text file into a ContentObject[]
+// google doc has to be formatted correctly: blank lines between content, links in markdown style
 async function docsUrlToContentObjectArrayJSON(url: string, filePath: string): Promise<string> {
-
-    const tempFilePath = filePath.split('.')[0] + ".temp.txt";
+    const tempFilePath = "temp.txt";
     await downloadFile(url, tempFilePath).catch(error => console.log(error));
     let data = readFileSync(tempFilePath, 'utf8');
 
@@ -46,10 +47,13 @@ async function docsUrlToContentObjectArrayJSON(url: string, filePath: string): P
                 el.trim();
                 // pattern is para -> link text -> link url
                 if (i % 3 == 0) {
+                    // para
                     paraContent.push(el);
                 } else if (i % 3 == 1) {
+                    // link
                     linkUrl = el;
                 } else {
+                    // url
                     let link: Link = new Link(el, linkUrl)
                     paraContent.push(link);
                 }
@@ -61,6 +65,8 @@ async function docsUrlToContentObjectArrayJSON(url: string, filePath: string): P
                 let prevPara = prevContentObject?.data;
                 // have to check for typescript to be happy
                 if (prevPara instanceof Para) {
+                    // add break to end of previous para
+                    prevPara.content.push(LINE_BREAK);
                     paraContent= prevPara.content.concat(paraContent)
                 }
             } 
@@ -74,50 +80,9 @@ async function docsUrlToContentObjectArrayJSON(url: string, filePath: string): P
             console.error(err);
         }
     });
-    //TODO: delete <filePath>.temp.txt file
-    return JSON.stringify(content);
+    //TODO: delete temp.txt file
+    return JSON.stringify(content); 
 }
 
 //docsUrlToContentObjectArrayJSON(fiveWaysUrl, fiveWaysPath).then(result => console.log(result));
 docsUrlToContentObjectArrayJSON(actFourUrl, actFourPath).then(result => console.log(result));
-
-/*
-            // it's a Para, possibly with links inside
-            if (prevType == ContentTypes.Para) {
-                // add this content to the previous para content
-                let prevPara: ContentObject = content[content.length - 1];
-            }
-            // array splitting paragraph from [url]
-            const paraArray: string[] = line.split(/\[|\]/);
-            
-            // build the paragraph content array for new Para(paraContent);
-            let paraContent: (string | Link)[] = [];
-            // the text inside parens that will be the Link text
-            let preLink: string = null;
-            let i = 0;
-            paraArray.forEach((el: string) => {
-                el = el.trim();
-                if (preLink && preLink[preLink.length - 1] == ')') {
-                    // line is a link
-                    // remove previous word from paraContent
-                    let prevText: string = null;
-                    if (i > 0) {
-                        prevText = paraArray[i - 1];
-                        // remove parentheses from prevText, aka start and end chars
-                        
-                        prevText = prevText.substring(1, prevText.length - 1);
-                        paraContent[i-1] = prevText;
-                    }
-                    paraContent.push(new Link(el, prevText));
-                } else {
-                    // text
-                    paraContent.push(el);
-                }
-                // Link text must be within parens
-                preLink = (el.split("(").slice(-1))[0];
-                i++;
-            });
-            content.push(new ContentObject(ContentTypes.Para, new Para(paraContent)));
-            prevType = ContentTypes.Para;
-        }
-*/

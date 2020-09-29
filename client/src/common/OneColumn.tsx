@@ -2,7 +2,8 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import "../App.css";
-import {Para, Link, ContentObject, ContentTypes, OneColumnProps } from "./propTypes";
+import {Para, Link, ContentObject, ContentTypes } from "./ContentTypes";
+import { OneColumnProps } from "./propTypes";
 import Player from "./Player";
 
 type ContentArray = {
@@ -56,6 +57,8 @@ function makeDiv(content: ContentObject): JSX.Element {
                                 href={element.url}
                             >&nbsp;{element.text}&nbsp;</a>
                         )
+                    } else if(element === "(line break)") {
+                        children.push("BREAK")
                     } else {
                         children.push(element);
                     }

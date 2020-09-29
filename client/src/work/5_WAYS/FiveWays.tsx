@@ -1,7 +1,8 @@
 import React from "react";
 import "../../App.css";
 import OneColumn from "../../common/OneColumn";
-import { ContentObject, OneColumnProps } from "../../common/propTypes";
+import { ContentObject } from "../../common/ContentTypes";
+import { OneColumnProps } from "../../common/propTypes";
 import { getContent } from "../../common/JsonToContent";
 import FiveWaysJSON from './FiveWays.json';
 import img1 from "./WAYS1.jpg";

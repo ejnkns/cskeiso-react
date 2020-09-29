@@ -26,7 +26,7 @@
   "scripts": {
     "deploy": "npm run build",
     "start": "react-scripts start",
-    "build": "npm run start ../docs-databse && react-scripts build",
+    "build": "react-scripts build",
     "tsc": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
