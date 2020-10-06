@@ -48,6 +48,7 @@ export async function docsUrlToContentObjectArrayJSON(url: string, filePath: str
                 }
                 prevWasNullLine = true;
             } else {
+                prevWasNullLine = false;
                 // split links (url and text) from para
                 let paraText: string[] = line.trim().split(MATCH_MARKDOWN_URL);
                 let i = 0;
@@ -89,7 +90,6 @@ export async function docsUrlToContentObjectArrayJSON(url: string, filePath: str
                 content.push(new ContentObject(ContentTypes.Para, new Para(paraContent)));
                 prevType = ContentTypes.Para;
             }
-            prevWasNullLine = false;
         }
     }
     writeFile(filePath, JSON.stringify(content), (err) => {
@@ -100,6 +100,3 @@ export async function docsUrlToContentObjectArrayJSON(url: string, filePath: str
     //TODO: delete temp.txt file
     return JSON.stringify(content); 
 }
-
-//docsUrlToContentObjectArrayJSON(fiveWaysUrl, fiveWaysPath).then(result => console.log(result));
-//docsUrlToContentObjectArrayJSON(actFourUrl, actFourPath).then(result => console.log(result));
