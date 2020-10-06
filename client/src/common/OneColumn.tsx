@@ -25,7 +25,11 @@ function Content({ content }: ContentArray) {
     // might have to change type to React.FC
     let children: JSX.Element[] = [<div className="content-parent"></div>]
     for (let e of content) {
-        children.push(makeDiv(e));
+        if (e) {
+            children.push(makeDiv(e));
+        } else {
+            console.error("Element '" + e + "' of content is null");
+        }
     }
     return (
         <div>
@@ -33,6 +37,11 @@ function Content({ content }: ContentArray) {
         </div>
     );
 }
+/*
+function makeKey(input: any): string {
+    return (input + (new Date().toTimeString));
+}
+*/
 
 function makeDiv(content: ContentObject): JSX.Element {
     let value = content.data;
@@ -44,21 +53,18 @@ function makeDiv(content: ContentObject): JSX.Element {
         }
         case ContentTypes.Para: {
             if (value instanceof Para) {
-
                 let children: React.ReactNode[] = [];
-
                 value.content.forEach(element => {
                     if (element instanceof Link) {
-                        //React.createElement("a", { target: "_blank", rel: "nooperner noreferrer", href: {}) 
                         children.push(
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 href={element.url}
-                            >&nbsp;{element.text}&nbsp;</a>
+                            >{element.text}</a>
                         )
                     } else if(element === "(line break)") {
-                        children.push("BREAK")
+                        children.push(<br/>)
                     } else {
                         children.push(element);
                     }
@@ -79,7 +85,7 @@ function makeDiv(content: ContentObject): JSX.Element {
                         rel="noopener noreferrer"
                         href={url}
                     >
-                        &nbsp;{text}&nbsp;
+                        {text};
                     </a>
                 );
             } else {
