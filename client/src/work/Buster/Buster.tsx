@@ -1,20 +1,22 @@
 import React from "react";
 import "../../App.css";
-import Header from "../../common/Header";
-import Footer from "../../common/Footer";
-import Player from "../../common/Player";
+import OneColumn from "../../common/OneColumn";
 import img from "./Buster.jpg";
+import { getContent } from "gdocs-database";
+import BusterJson from "./Buster.json";
 
 function Buster() {
-  var url1 = "https://vimeo.com/307621850";
+  // eslint-disable-next-line
+  let loadimages = [img];
+  const content = getContent(BusterJson);
+  const props = {
+    page: "work",
+    content: content
+  }
+
   return (
-    <div>
-      <Header page="work" />
-      <Player url={url1} />
-      <img alt="" src={img} />
-      <Footer />
-    </div>
-  );
+    <OneColumn {...props} />
+  )
 }
 
 export default Buster;

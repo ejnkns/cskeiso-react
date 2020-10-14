@@ -1,20 +1,22 @@
 import React from "react";
 import "../../App.css";
-import Header from "../../common/Header";
-import Player from "../../common/Player";
-import Footer from "../../common/Footer";
 import img1 from "./1-beige.jpg";
 import img2 from "./BEIGESHOW-poster1.jpg";
+import { ContentObject } from "../../common/ContentTypes";
+import { getContent } from "gdocs-database";
+import BeigeJson from "./Beige.json";
+import OneColumn from "../../common/OneColumn";
 
 function Beige() {
+  let content: ContentObject[] = getContent(BeigeJson);
+  let props = {
+    page: "work",
+    content: content
+  }
+  // eslint-disable-next-line
+  let loadcontentplease = [img1, img2];
   return (
-    <div>
-      <Header page="work" />
-      <Player url={"https://vimeo.com/434936637"} />
-      <img alt="" src={img1} />
-      <img loading="lazy" alt="" src={img2} />
-      <Footer />
-    </div>
+    <OneColumn {...props} />
   );
 }
 

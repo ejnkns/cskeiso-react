@@ -1,18 +1,22 @@
 import React from "react";
 import "../../App.css";
-import Header from "../../common/Header";
-import Footer from "../../common/Footer";
 import img1 from "./iphone-notes1.jpg";
 import img2 from "./iphone-notes2.jpg";
+import { getContent } from "gdocs-database";
+import IPhoneNotesJson from "./IPhoneNotes.json";
+import OneColumn from "../../common/OneColumn";
 
 function IPhoneNotes() {
+  // eslint-disable-next-line
+  let loadimages = [img1, img2];
+  const content = getContent(IPhoneNotesJson);
+  const props = {
+    page: "work",
+    content: content
+  }
+
   return (
-    <div>
-      <Header page="work" />
-      <img loading="lazy" alt="" src={img1} />
-      <img loading="lazy" alt="" src={img2} />
-      <Footer />
-    </div>
+    <OneColumn {...props} />
   );
 }
 

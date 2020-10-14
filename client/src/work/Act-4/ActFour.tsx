@@ -7,7 +7,7 @@ import img3 from "./Act4_3.jpg";
 import ActFourPDF from "./act4.pdf";
 import { ContentObject } from "../../common/ContentTypes";
 import { OneColumnProps } from "../../common/propTypes";
-import { getContent } from "../../common/JsonToContent";
+import { getContent } from "gdocs-database";
 import ActFourJSON from "./ActFour.json";
 
 function ActFour() {
@@ -20,6 +20,7 @@ function ActFour() {
   // so the links in FiveWays.json will work. 
   //TODO make sure this works in build
   // might have to move images to public folder?
+  // eslint-disable-next-line
   const resources = [img1, img2, img3, ActFourPDF];
   return (
     <OneColumn {...props} />

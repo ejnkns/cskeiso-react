@@ -1,38 +1,23 @@
 import React from "react";
 import "../../App.css";
-import Header from "../../common/Header";
-import Footer from "../../common/Footer";
 import img1 from "./casting-couch-1.png";
 import img2 from "./casting-couch-2.jpg";
 import img3 from "./casting-couch-3.jpg";
+import { getContent } from "gdocs-database";
+import CastingCouchJson from "./CastingCouch.json";
+import OneColumn from "../../common/OneColumn";
 
 function CastingCouch() {
-  return (
-    <div>
-      <Header page="work" />
-      <p>
-        Casting Couch - 2020
-        <br />
-        Exhibited at Mejia Gallery
-        <br />
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://min.report/art/theres-no-art-in-heaven/"
-        >
-          min.report article
-        </a>
-      </p>
+  // eslint-disable-next-line
+  let loadimages = [img1, img2, img3];
+  const content = getContent(CastingCouchJson);
+  const props = {
+    page: "work",
+    content: content
+  }
 
-      <img alt="carmen lying on a black leather couch" src={img1} />
-      <img alt="a small old tv showing the same scene" src={img2} />
-      <img
-        loading="lazy"
-        alt="the tv is in the corner of an art gallery"
-        src={img3}
-      />
-      <Footer />
-    </div>
+  return (
+    <OneColumn {...props} />
   );
 }
 

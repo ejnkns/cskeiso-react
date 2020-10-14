@@ -3,7 +3,7 @@ import "../../App.css";
 import OneColumn from "../../common/OneColumn";
 import { ContentObject } from "../../common/ContentTypes";
 import { OneColumnProps } from "../../common/propTypes";
-import { getContent } from "../../common/JsonToContent";
+import { getContent } from "gdocs-database";
 import FiveWaysJSON from './FiveWays.json';
 import img1 from "./WAYS1.jpg";
 import img2 from "./WAYS2.jpg";
@@ -19,6 +19,7 @@ function FiveWays() {
   // so the static links in FiveWays.json will work. 
   //TODO: make sure this works in build
   // might have to move images to public folder?
+  // eslint-disable-next-line
   const imgs = [img1, img2, img3];
   return (
     <OneColumn {...props} />
