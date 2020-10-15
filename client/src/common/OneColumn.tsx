@@ -54,7 +54,7 @@ function makeDiv(content: ContentObject): JSX.Element {
         case ContentTypes.Para: {
             if (value instanceof Para) {
                 let children: React.ReactNode[] = [];
-                value.content.forEach(element => {
+                value.content.forEach((element: Link | string) => {
                     if (element instanceof Link) {
                         children.push(
                             <a
