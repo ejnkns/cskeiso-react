@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-import { ContentObject } from "../../common/ContentTypes";
+import { ContentObject } from "gdocs-database";
 import { OneColumnProps } from "../../common/propTypes";
 import { getContent } from "gdocs-database";
 import OneColumn from "../../common/OneColumn";

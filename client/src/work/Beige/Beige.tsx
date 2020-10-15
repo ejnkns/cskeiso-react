@@ -2,7 +2,7 @@ import React from "react";
 import "../../App.css";
 import img1 from "./1-beige.jpg";
 import img2 from "./BEIGESHOW-poster1.jpg";
-import { ContentObject } from "../../common/ContentTypes";
+import { ContentObject } from "gdocs-database";
 import { getContent } from "gdocs-database";
 import BeigeJson from "./Beige.json";
 import OneColumn from "../../common/OneColumn";

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import "../App.css";
-import {Para, Link, ContentObject, ContentTypes } from "./ContentTypes";
+import {Para, Link, ContentObject, ContentTypes } from "gdocs-database";
 import { OneColumnProps } from "./propTypes";
 import Player from "./Player";
 
@@ -25,6 +25,8 @@ function Content({ content }: ContentArray) {
     // might have to change type to React.FC
     let children: JSX.Element[] = [<div className="content-parent"></div>]
     for (let e of content) {
+        console.log(e);
+        
         if (e) {
             children.push(makeDiv(e));
         } else {
@@ -45,6 +47,8 @@ function makeKey(input: any): string {
 
 function makeDiv(content: ContentObject): JSX.Element {
     let value = content.data;
+    console.log(value.constructor.name);
+    
     switch (content.contentType) {
         case ContentTypes.Title: { 
             return(
@@ -53,6 +57,7 @@ function makeDiv(content: ContentObject): JSX.Element {
         }
         case ContentTypes.Para: {
             if (value instanceof Para) {
+                console.log("value is para\n" + typeof(value));
                 let children: React.ReactNode[] = [];
                 value.content.forEach(element => {
                     if (element instanceof Link) {
@@ -71,8 +76,9 @@ function makeDiv(content: ContentObject): JSX.Element {
                 });
                 let rootP = React.createElement("p", { className: "" }, ...children);
                 return (rootP);
+            } else {
+                return (<div>value not instance of Para</div>);
             }
-            return (<div/>);
         }
         case ContentTypes.Link: { 
             let url: string, text: string;
