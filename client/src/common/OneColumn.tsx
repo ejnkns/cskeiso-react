@@ -25,8 +25,6 @@ function Content({ content }: ContentArray) {
     // might have to change type to React.FC
     let children: JSX.Element[] = [<div className="content-parent"></div>]
     for (let e of content) {
-        console.log(e);
-        
         if (e) {
             children.push(makeDiv(e));
         } else {
@@ -47,8 +45,6 @@ function makeKey(input: any): string {
 
 function makeDiv(content: ContentObject): JSX.Element {
     let value = content.data;
-    console.log(value.constructor.name);
-    
     switch (content.contentType) {
         case ContentTypes.Title: { 
             return(
@@ -57,7 +53,6 @@ function makeDiv(content: ContentObject): JSX.Element {
         }
         case ContentTypes.Para: {
             if (value instanceof Para) {
-                console.log("value is para\n" + typeof(value));
                 let children: React.ReactNode[] = [];
                 value.content.forEach(element => {
                     if (element instanceof Link) {
